@@ -28,11 +28,8 @@ Notes for implementation:
     |----------------------------|
     |            &nbsp;          |
     
-  0. Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
-    * `nano local.conf`
-      
-      or
-    * `vim local.conf`
+  0. `nano local.conf` or `vim local.conf`
+      Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
     
