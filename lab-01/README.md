@@ -33,8 +33,9 @@ Notes for implementation:
     `./stack.sh 2>&1 | tee stack.log`
 
     > :white_check_mark: **Additional Info**
-    >   In order to capture the printed results of `stack.sh` we pipe it to a file
-    >     * `2>&1` pipes stderr to stdout (allowing us to capture both)
-    >     * `|` is a pipe, it sends values to the next command
-    >     * `tee` is splits a pipe (like a "T) it sends printed results to a file `stack.log` in addition to printing to the screen
+    >
+    > In order to capture the printed results of `stack.sh` we pipe it to a file
+    >   * `2>&1` pipes stderr to stdout (allowing us to capture both)
+    >   * `|` is a pipe, it sends values to the next command
+    >   * `tee` is splits a pipe (like a "T) it sends printed results to a file `stack.log` in addition to printing to the screen
 
