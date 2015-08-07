@@ -29,8 +29,8 @@ Notes for implementation:
     |            &nbsp;          |
     
   0. Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
-    * :question: why are they setting MULTI_HOST, not likely that we are using more than one host
     * `nano local.conf`
+      or
     * `vim local.conf`
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
