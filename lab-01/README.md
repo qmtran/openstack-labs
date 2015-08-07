@@ -40,7 +40,7 @@ Notes for implementation:
     >   * `|` is a pipe, it sends values to the next command
     >   * `tee` is splits a pipe (like a "T) it sends printed results to a file `stack.log` in addition to printing to the screen
 
-  0. Login to the OpenStack Horizon Web Interface by pointing your browser at the public IP address of your instance, explore the accessible pages and fill in the table of information
+  0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of your instance, explore the accessible pages and fill in the table of information
 
     ![Image of login](img/horizon-login.png)
     
