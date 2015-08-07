@@ -19,11 +19,11 @@ Notes for implementation:
     > 
     > `stack.sh` is a very long, but well documented script.  Check it out [here](http://docs.openstack.org/developer/devstack/stack.sh.html).
 
-  0. `ip addr show dev eth0` 
+  0. `ip addr show dev eth0` and record your instance's internal IP address 
   
-    |My Instance IP Address|
-    |----------------------|
-    |       &nbsp;         |
+    |Instance Internal IP Address|
+    |----------------------------|
+    |            &nbsp;          |
     
   0. Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
     * :question: why are they setting MULTI_HOST, not likely that we are using more than one host
