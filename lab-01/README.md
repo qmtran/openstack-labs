@@ -17,11 +17,6 @@ Notes for implementation:
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  
-    > :white_check_mark: **Additional Info**: 
-    > 
-    > `stack.sh` is a very long, but well documented script.  Check it out [here](http://docs.openstack.org/developer/devstack/stack.sh.html).
-
   0. `ip addr show dev eth0` and record your instance's internal IP address 
   
     |Instance Internal IP Address|
@@ -30,7 +25,7 @@ Notes for implementation:
     
   0. `nano local.conf` or `vim local.conf`
       
-      Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
+      Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
     
@@ -38,7 +33,9 @@ Notes for implementation:
 
     > :white_check_mark: **Additional Info**:
     >
-    > In order to capture the printed results of `stack.sh` we pipe it to a file
+    > * `stack.sh` is a very long, but well documented script.  Check it out [here](http://docs.openstack.org/developer/devstack/stack.sh.html).
+    >
+    > *  In order to capture the printed results of `stack.sh` we pipe it to a file
     >   * `2>&1` pipes stderr to stdout (allowing us to capture both)
     >   * `|` is a pipe, it sends values to the next command
     >   * `tee` is splits a pipe (like a "T) it sends printed results to a file `stack.log` in addition to printing to the screen
