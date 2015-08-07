@@ -12,8 +12,10 @@
   If you aren't already here it is located at `https://github.com/alta3/openstack-labs`
   
   ![Star this repository](img/github-star.png)
-  
-  Staring is like a bookmark on github.com,  you can view and search your stared repositories at [github.com/stars](github.com/stars)
+
+  > :white_check_mark: **Additional Info**:
+  >
+  > Staring is like a bookmark on github.com,  you can view and search your stared repositories at [github.com/stars](github.com/stars)
 
 0. Fork the lab repository into your account
 
