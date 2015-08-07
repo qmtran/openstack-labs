@@ -8,6 +8,8 @@
     
 
 0. Star and this lab's repository
+
+  If you aren't already here it is located at `https://github.com/alta3/openstack-labs`
   
   ![Star this repository](img/github-star.png)
   
