@@ -30,6 +30,7 @@ Notes for implementation:
     
   0. Edit the 'local.conf` file, it should look like [local.conf](local.conf) 
     * `nano local.conf`
+      
       or
     * `vim local.conf`
 
