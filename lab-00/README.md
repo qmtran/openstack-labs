@@ -1,17 +1,19 @@
 ## Lab 0
 
-### Create a Github account or Login
+### Setup Github Lab Repository
+
+0. Create a Github account or Login
 
   ![Create an account](img/github-create.png)
     
 
-### Star and this lab's repository
+0. Star and this lab's repository
   
   ![Star this repository](img/github-star.png)
   
   Staring is like a bookmark on github.com,  you can view and search your stared repositories at [github.com/stars](github.com/stars)
 
-### Fork the lab repository into your account
+0. Fork the lab repository into your account
 
   ![Fork this repository](img/github-fork1.png)
 
