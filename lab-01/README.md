@@ -46,6 +46,3 @@ Notes for implementation:
     
     ![Image Dashboard](img/horizon-dashboard.png)
     
-    ![Image of hypervisor page](img/horizon-hypervisors.png)
-
-    ![Image of hypervisor page2](img/horizon-hypervisors2.png)
