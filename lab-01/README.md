@@ -15,7 +15,9 @@ Notes for implementation:
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
   
-    > :white_check_mark: **Additional Info**: `stack.sh` is a very long, but well documented script.  Check it out [here](http://docs.openstack.org/developer/devstack/stack.sh.html).
+    > :white_check_mark: **Additional Info**: 
+    > 
+    > `stack.sh` is a very long, but well documented script.  Check it out [here](http://docs.openstack.org/developer/devstack/stack.sh.html).
 
   0. `ip addr show dev eth0` 
   
@@ -32,7 +34,7 @@ Notes for implementation:
     
     `./stack.sh 2>&1 | tee stack.log`
 
-    > :white_check_mark: **Additional Info**
+    > :white_check_mark: **Additional Info**:
     >
     > In order to capture the printed results of `stack.sh` we pipe it to a file
     >   * `2>&1` pipes stderr to stdout (allowing us to capture both)
