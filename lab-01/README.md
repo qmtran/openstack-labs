@@ -1,8 +1,10 @@
 ## Lab 1
 
 Notes for implementation:
-* :red_circle: aws vm's need to in a security group that allows ports: 22, 80 
-* :red_circle: devstack install fails on t2.micro ubuntu :(
+* aws vm's need to in a security group that allows a crapton of ports, opening all of them for now 
+* devstack install fails on t2.micro ubuntu :(  t2.medium worked
+* devstack install takes about 15 minutes, might want to ansibalize that? 
+* is the time waiting for devstack to install useful for students or should we do it for them?  
 
 ### Connect to your instance:
   0. `chmod 400 student-key-###.pem`
