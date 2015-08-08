@@ -11,6 +11,6 @@ Lab Objectives:
 
 ## Lab 0 - Document your instances public IP addresses
  
- | Controller | Controller |
- | ---------- | ---------- |
- | W.X.Y.Z    | W.X.Y.Z    |
+| Controller | Compute    |
+| ---------- | ---------- |
+| W.X.Y.Z    | W.X.Y.Z    |
