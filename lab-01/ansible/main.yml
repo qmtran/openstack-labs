@@ -1,0 +1,16 @@
+---
+- hosts: host1
+  tasks:
+   - name: Install tools
+     apt: name={{item}} state=latest
+     sudo: yes
+     with_items:
+       - git
+       - htop
+       - vim
+
+   - name: Checkout DevStack
+     git: repo=https://git.openstack.org/openstack-dev/devstack dest=/home/ubuntu/devstack
+
+   - name: Setup local.conf
+     copy: src=local.conf dest=/home/ubuntu/devstack/local.conf

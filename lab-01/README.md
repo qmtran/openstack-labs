@@ -1,4 +1,4 @@
-## Lab 1
+# Lab 1
 
 Notes for implementation:
 * aws vm's need to in a security group that allows a crap-ton of ports, opening all of them for now 
@@ -7,12 +7,12 @@ Notes for implementation:
 * Anytime ./stack.sh fails we should document the error and solution in [common errors](common-errors.md), most of my time spent on this lab was mis-configuring local.conf and seeing what errors show up
 * is the time waiting for devstack to install useful for students or should we do it for them?  
 
-### Connect to your instance:
+## Connect to your instance:
   0. `chmod 400 student-key-###.pem`
   0. `ssh ubuntu@W.X.Y.Z -i student-key-###.pem`
   0. `sudo whoami`
 
-### Install DevStack:
+## Install DevStack:
   0. `sudo apt-get install git`
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`

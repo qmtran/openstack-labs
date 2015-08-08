@@ -1,6 +1,6 @@
-## Lab 0
+# Lab 0
 
-### Setup Github Lab Repository
+## Setup Github Lab Repository
 
 0. [Create a Github account](https://github.com/join) or [Login](https://github.com/login)
 
@@ -27,7 +27,7 @@
 
   From this point on you can edit and commit changes to your own copy of the lab repository.  You can do this from right inside of github (click edit on any file)
 
-### Document your instance details
+## Document your instance details
 
 | Instance Public IP Address | Private Keyfile Name | 
 |----------------------------|----------------------|
