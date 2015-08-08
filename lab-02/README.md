@@ -7,7 +7,7 @@
 ## Add a Project on Devstack (Horizon Interface)
 
   :red_circle: TODO, currently broken in DevStack
-s
+
 ## Launch an Instance on DevStack (Horizon Interface)
 
   0. Open the Horizon interface (navigate your browser to the public IP address)
@@ -33,5 +33,6 @@ s
 
   0. Use `ssh` to access and interact with the newly launched instance
 
+    * `ip addr show` Ensure you are currently ssh'ed into the controller instancae, if not follow steps from previous lab
     * `ssh cirros@10.0.0.2` (password `cubswin:)`)
 
