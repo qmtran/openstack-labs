@@ -1,4 +1,8 @@
-# Lab 1
+# Lab 1 - DevStack Controller
+
+  Lab Objectives:
+
+  0. Install a DevStack controller
 
 ## Connect to your instance:
   0. `chmod 400 student.pem`

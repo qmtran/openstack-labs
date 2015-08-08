@@ -1,5 +1,10 @@
 # Lab 2 - Devstack Horizon Interface
 
+  Lab Objectives:
+
+  0. Become familiar with the OpenStack Horizon Interface
+  0. Launch an instance from the Horizon Interface
+
 ## Add a User
   
   :red_circle: TODO, currently broken in DevStack, launching instance should change to be user logged in
