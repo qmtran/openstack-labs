@@ -16,7 +16,7 @@
 
   0. Manage the new group and add an SSH rule
   
-     ![Manage Group](img/security-manage.png) 
+     ![Manage Group](img/security-manage-rule.png) 
      ![Add Rule](img/security-add.png) 
      ![Create Rule](img/security-ssh.png) 
 
