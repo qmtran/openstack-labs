@@ -2,14 +2,14 @@
 
 ### Setup Github Lab Repository
 
-0. Create a Github account or Login
+0. [Create a Github account](https://github.com/join) or [Login](https://github.com/login)
 
   ![Create an account](img/github-create.png)
     
 
 0. Star and this lab's repository
 
-  If you aren't already here it is located at `https://github.com/alta3/openstack-labs`
+  If you aren't already here it is located at https://github.com/alta3/openstack-labs
   
   ![Star this repository](img/github-star.png)
 
