@@ -74,6 +74,8 @@
 
     :red_circle: TODO items from interface
 
+    | Info to find | Value |
+    | -------------| ----- |
     | Item 1 | |
     | Item 2 | |
     
