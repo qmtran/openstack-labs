@@ -25,7 +25,7 @@
     ![Set details](img/horizon-details.png)
     ![Launch](img/horizon-spawn.png)
  
-  0. Open console and interact with the newly launched instance
+  0. Open console, login and interact with the newly launched instance
     
     ![Instance details](img/horizon-active.png)
     ![Console tab](img/horizon-console.png)
