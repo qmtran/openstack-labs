@@ -14,7 +14,10 @@
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
+  0.  Record your instance's internal IP address in the [Lab 0 table](../README.md) 
+     
+      `ip addr show dev eth0` 
+
   0.  Edit the 'local.conf` file.  The sample config file will have useful comments which are not replicated below.
       
       `nano local.conf` or `vim local.conf`
@@ -23,7 +26,7 @@
         [[local|localrc]]
 
         # tokens and passwords
-        SERVICE_TOKEN=DKS3MQMX72MSLQP231N
+        SERVICE_TOKEN=DKS3MQMX72MSLQP231N # an alphanumeric token
         ADMIN_PASSWORD=supersecret
         MYSQL_PASSWORD=radicallyrelational
         RABBIT_PASSWORD=rasciallyrabbit
