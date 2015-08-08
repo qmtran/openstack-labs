@@ -14,7 +14,7 @@
 
 ## Update && Upgrade instances
 
-  0. Each lab will have a `lab-hosts` file.  Once the public IP addresses are set in this file you can test connectivity to the hsts
+  0. Each lab will have a `lab-hosts` file.  Once the public IP addresses are set in this file you can test connectivity:
   
   `ansible -i lab-hosts all -m ping -vvvv`
   
