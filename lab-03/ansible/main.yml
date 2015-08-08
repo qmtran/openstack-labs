@@ -1,16 +1,16 @@
 ---
-- hosts: host1
+- hosts: dev.controller
   tasks: 
-   - name: Record public IP of host1
+   - name: Record public IP
      shell: wget -qO- http://ipecho.net/plain ; echo
      register: public_ip
 
-- hosts: host2
+- hosts: dev.compute
 
   vars:
     host_ip: "{{ ansible_default_ipv4.address }}"
-    first_ip: "{{ hostvars.host1.ansible_default_ipv4.address }}"
-    first_public_ip: "{{ hostvars.host1.public_ip.stdout }}"
+    first_ip: "{{ hostvars['dev.controller'].ansible_default_ipv4.address }}"
+    first_public_ip: "{{ hostvars['dev.controller'].public_ip.stdout }}"
 
   tasks:
    - name: Install tools
@@ -30,6 +30,11 @@
      template: 
        src: local.conf.j2
        dest: /home/ubuntu/devstack/local.conf
+
+   - name: UnStack (idempotency)
+     shell: ./unstack.sh chdir=/home/ubuntu/devstack
+     async: 120
+     poll: 5
 
    - name: Install DevStack compute node (async)
      shell: ./stack.sh chdir=/home/ubuntu/devstack

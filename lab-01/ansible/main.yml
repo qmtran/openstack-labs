@@ -1,6 +1,10 @@
 ---
-- hosts: host1
+- hosts: dev.controller
   tasks:
+   - name: Record public IP
+     shell: wget -qO- http://ipecho.net/plain ; echo
+     register: public_ip
+
    - name: Install tools
      apt: name={{item}} state=latest
      sudo: yes
@@ -15,9 +19,14 @@
       dest: /home/ubuntu/devstack
 
    - name: Setup local.conf
-     copy: 
-       src: local.conf 
+     template: 
+       src: local.conf.j2
        dest: /home/ubuntu/devstack/local.conf
+
+   - name: UnStack (idempotency)
+     shell: ./unstack.sh chdir=/home/ubuntu/devstack
+     async: 120
+     poll: 5
 
    - name: Install DevStack (async)
      shell: ./stack.sh chdir=/home/ubuntu/devstack

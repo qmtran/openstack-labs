@@ -1,5 +1,5 @@
 ---
-- hosts: host1:host2
+- hosts: devstack
   tasks:
    - name: Update & Upgrade
      apt: update_cache=yes upgrade=yes

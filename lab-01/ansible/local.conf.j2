@@ -16,7 +16,7 @@ FLOATING_RANGE=192.168.0.0/24
 
 NOVA_VNC_ENABLED=True
 NOVNCPROXY_URL="http://{{ public_ip }}:6080/vnc_auto.html"
-VNCSERVER_LISTEN={{ ansible_default_ipv4.address }}
+VNCSERVER_LISTEN={{ ansible_default_ipv4.address }}"
 VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
 
 MULTI_HOST=True

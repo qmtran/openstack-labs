@@ -26,3 +26,9 @@
   ![Fork this repository](img/github-fork3.png)
 
   From this point on you can edit and commit changes to your own copy of the lab repository.  You can do this from right inside of github (click edit on any file)
+
+
+## Connect to Jumper Instance
+
+  A jumper is a simple linux machine you will use as a launching point into the lab environment.  
+  We will ssh into this host in order to connect to all other instances in the lab environments.
