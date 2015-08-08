@@ -10,4 +10,4 @@
   Ansible is used to automate and test lab environments.  Think of it as a robo-student.  You will need to install and configure a few files in order for ansible to be usable within the lab environment.
 
   0. [Install Ansible](http://docs.ansible.com/ansible/intro_installation.html) on your system
-  0. Update the [lab-hosts](../lab-hosts) and update the public IP addresses of the instances
+  0. Update the [lab-hosts](../lab-hosts) public IP addresses (`ansible_ssh_host`) of the instances
