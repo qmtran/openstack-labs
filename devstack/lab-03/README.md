@@ -28,11 +28,12 @@
   0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of the controller
   0. Admin > System > Hypervisors and marvel at the number of Hypervisors
    
-     ![TWO HYPERVISORS](horizon-twohyper.png)
+     ![TWO HYPERVISORS](img/horizon-twohyper.png)
 
   0. Launch another Instance and ping between the two currently running instances 
 
      Project > Compute > Instances > Launch Instance
      
-     ![Ping Pong](horizon-ping.png)
+     ![Ping Pong](img/horizon-ping.png)
+     ![Ping Pong](img/horizon-pong.png)
       
