@@ -25,6 +25,9 @@
      ![New Rules](img/security-rules.png)
   
   0. Add the security group to a running instance.
+  
 
      ![Add Security Group](img/security-associate.png)
      ![Add Security Group](img/security-associate2.png)
+
+     Click the `+` on the Basic line and then Save
