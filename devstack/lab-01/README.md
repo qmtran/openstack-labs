@@ -16,6 +16,7 @@
   0. `cp samples/local.conf local.conf`
   0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
   0.  Edit the 'local.conf` file.  Your file will have useful comments which are not replicated below.
+      
       `nano local.conf` or `vim local.conf`
       
       ``` shell
