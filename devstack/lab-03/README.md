@@ -16,5 +16,23 @@
   0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
   0. `nano local.conf` or `vim local.conf`
       
-      Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
+     Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
 
+  0. Run `ip addr show`
+  
+  0. Run stack.sh, this will take a little bit less time that Lab 1
+    
+     `./stack.sh 2>&1 | tee stack.log`
+
+  0. Run `ip addr show` again and notice the added interfaces and bridges
+  0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of the controller
+  0. Admin > System > Hypervisors and marvel at the number of Hypervisors
+   
+     ![TWO HYPERVISORS](horizon-twohyper.png)
+
+  0. Launch another Instance and ping between the two currently running instances 
+
+     Project > Compute > Instances > Launch Instance
+     
+     ![Ping Pong](horizon-ping.png)
+      

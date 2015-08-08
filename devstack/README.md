@@ -12,7 +12,7 @@ Lab Objectives:
 ## Lab 0 - Document IP addresses
  
 Your instructor will provide two IP addresses for this lab. 
-Space is also provided for internal IP addresses which will be available during the course of the labs.
+Space is also provided for internal IP addresses which will be filled out during the labs.
 
          | Controller | Compute    |
 -------- | ---------- | ---------- |

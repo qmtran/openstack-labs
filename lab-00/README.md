@@ -33,3 +33,8 @@
 
   A jumper is a simple linux machine you will use as a launching point into the lab environment.  
   We will ssh into this host in order to connect to all other instances in the lab environments.
+  * :red_circle: TODO fill this out with instructions
+
+## Checkout your forked repository
+
+  * :red_circle: TODO fill this out with instructions
