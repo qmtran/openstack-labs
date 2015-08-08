@@ -5,15 +5,15 @@
   0. Become familiar with the OpenStack Horizon Interface
   0. Launch an instance from the Horizon Interface
 
-## Add a User
+## Add a User:
   
   :red_circle: TODO, currently broken in DevStack, launching instance should change to be user logged in
 
-## Add a Project
+## Add a Project:
 
   :red_circle: TODO, currently broken in DevStack
 
-## Launch an Instance
+## Launch an Instance:
 
   0. Open the Horizon interface (navigate your browser to the public IP address)
   0. Project > Compute > Instances > Launch Instance
