@@ -11,15 +11,15 @@
   0. :red_circle: TODO login as user?
   0. Navigate to: Project > Compute > Access > Create Security Group
 
-     ![Create Security Group](security-create.png)
-     ![Create Security Group](security-create2.png)
+     ![Create Security Group](img/security-create.png)
+     ![Create Security Group](img/security-create2.png)
 
   0. Manage the new group and add an SSH rule
   
-     ![Manage Group](security-manage.png) 
+     ![Manage Group](img/security-manage.png) 
      ![Add Rule](secuirty-add.png) 
-     ![Create Rule](security-ssh.png) 
+     ![Create Rule](img/security-ssh.png) 
 
   0. Create another rule for HTTPS
 
-     ![New Rules](security-rules.png)
+     ![New Rules](img/security-rules.png)
