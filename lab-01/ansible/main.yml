@@ -10,7 +10,16 @@
        - vim
 
    - name: Checkout DevStack
-     git: repo=https://git.openstack.org/openstack-dev/devstack dest=/home/ubuntu/devstack
+     git: 
+      repo: https://git.openstack.org/openstack-dev/devstack 
+      dest: /home/ubuntu/devstack
 
    - name: Setup local.conf
-     copy: src=local.conf dest=/home/ubuntu/devstack/local.conf
+     copy: 
+       src: local.conf 
+       dest: /home/ubuntu/devstack/local.conf
+
+   - name: Install DevStack (async)
+     shell: ./stack.sh chdir=/home/ubuntu/devstack
+     async: 900
+     poll: 5

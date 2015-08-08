@@ -15,4 +15,4 @@
 ## Update && Upgrade instances
 
   0. Test connectivity: `ansible -i lab-hosts all -m ping -vvvv`
-  0. Up[date,grade]: `ansible-playbook -i lab-hosts ansible/main.yml`
+  0. Up[date,grade]: `ansible-playbook -i lab-hosts lab-00/ansible/main.yml`
