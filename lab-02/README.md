@@ -24,11 +24,6 @@
     
     ![Instance details](img/horizon-active.png)
     ![Console tab](img/horizon-console.png)
-
-    > :red_circle: **DevStack Issue**:
-    >
-    > The VNC link provided uses the internal IP address of the controller.  You will need to modify this to be the public IP address.
-
     ![Console VNC](img/horizon-console2.png)
 
   0. Use `ssh` to access and interact with the newly launched instance
