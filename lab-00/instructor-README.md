@@ -12,10 +12,9 @@
   0. [Install Ansible](http://docs.ansible.com/ansible/intro_installation.html) on your system
   0. Update the [lab-hosts](../lab-hosts) public IP addresses (`ansible_ssh_host`) of the instances
 
-## Update && Upgrade instances
+## Connectivity Testing
 
-  0. Each lab will have a `lab-hosts` file.  Once the public IP addresses are set in this file you can test connectivity:
+  Each lab will have a `lab-hosts` file.  Once the public IP addresses are set in this file you can test connectivity:
   
   `ansible -i lab-hosts all -m ping -vvvv`
   
-  0. Up[date,grade]: `ansible-playbook -i lab-hosts lab-00/ansible/main.yml`
