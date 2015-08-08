@@ -12,7 +12,7 @@ Lab Objectives:
   0. Become familiar with adding a Floating IP Address
   0. Become familiar with the openstack command line utility
 
-## Lab 0 - Document IP addresses
+## Lab 0 - Document Lab IP addresses
  
 Your instructor will provide two IP addresses for this lab. 
 Space is also provided for internal IP addresses which will be filled out during the labs.

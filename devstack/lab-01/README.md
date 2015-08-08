@@ -15,9 +15,39 @@
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
   0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
-  0. `nano local.conf` or `vim local.conf`
+  0.  Edit the 'local.conf` file.  Your file will have useful comments which are not replicated below.
+      `nano local.conf` or `vim local.conf`
       
-      Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
+      ``` shell
+        [[local|localrc]]
+
+        # tokens and passwords
+        SERVICE_TOKEN=DKS3MQMX72MSLQP231N
+        ADMIN_PASSWORD=supersecret
+        MYSQL_PASSWORD=radicallyrelational
+        RABBIT_PASSWORD=rasciallyrabbit
+        SERVICE_PASSWORD=supersecret
+
+        FLAT_INTERFACE=eth0
+
+        # private IPs
+        FIXED_RANGE=10.0.0.0/16
+        FIXED_NETWORK_SIZE=65534
+
+        # public IPs
+        FLOATING_RANGE=192.168.0.0/24
+
+        MULTI_HOST=True
+
+        # $DEST is the install location (default /opt/stack)
+        LOGFILE=$DEST/logs/stack.sh.log
+        LOGDAYS=2
+
+        SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
+        SWIFT_REPLICAS=1
+        SWIFT_DATA_DIR=$DEST/data
+        enable_service tempest
+      ```
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
     
