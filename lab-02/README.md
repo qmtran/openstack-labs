@@ -1,14 +1,14 @@
-# Lab 2
+# Lab 2 - Devstack Horizon Interface
 
-## Add a User on Devstack (Horizon Interface)
+## Add a User
   
+  :red_circle: TODO, currently broken in DevStack, launching instance should change to be user logged in
+
+## Add a Project
+
   :red_circle: TODO, currently broken in DevStack
 
-## Add a Project on Devstack (Horizon Interface)
-
-  :red_circle: TODO, currently broken in DevStack
-
-## Launch an Instance on DevStack (Horizon Interface)
+## Launch an Instance
 
   0. Open the Horizon interface (navigate your browser to the public IP address)
   0. Project > Compute > Instances > Launch Instance
@@ -33,6 +33,6 @@
 
   0. Use `ssh` to access and interact with the newly launched instance
 
-    * `ip addr show` Ensure you are currently ssh'ed into the controller instancae, if not follow steps from previous lab
+    * Ensure you are currently ssh'ed into the controller instance (host1)
+    * If not follow steps from previous lab
     * `ssh cirros@10.0.0.2` (password `cubswin:)`)
-

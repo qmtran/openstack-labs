@@ -26,9 +26,3 @@
   ![Fork this repository](img/github-fork3.png)
 
   From this point on you can edit and commit changes to your own copy of the lab repository.  You can do this from right inside of github (click edit on any file)
-
-## Document your instance details
-
-| Instance Public IP Address | Private Keyfile Name | 
-|----------------------------|----------------------|
-|            &nbsp;          |         &nbsp;       |

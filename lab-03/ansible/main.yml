@@ -1,5 +1,17 @@
 ---
 - hosts: host1
+  tasks: 
+   - name: Record public IP of host1
+     shell: wget -qO- http://ipecho.net/plain ; echo
+     register: public_ip
+
+- hosts: host2
+
+  vars:
+    host_ip: "{{ ansible_default_ipv4.address }}"
+    first_ip: "{{ hostvars.host1.ansible_default_ipv4.address }}"
+    first_public_ip: "{{ hostvars.host1.public_ip.stdout }}"
+
   tasks:
    - name: Install tools
      apt: name={{item}} state=latest
@@ -15,12 +27,14 @@
       dest: /home/ubuntu/devstack
 
    - name: Setup local.conf
-     copy: 
-       src: local.conf 
+     template: 
+       src: local.conf.j2
        dest: /home/ubuntu/devstack/local.conf
 
-   - name: Install DevStack (async)
+   - name: Install DevStack compute node (async)
      shell: ./stack.sh chdir=/home/ubuntu/devstack
      async: 900
      poll: 5
+
+
 
