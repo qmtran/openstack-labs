@@ -21,4 +21,3 @@ Internal | A.B.C.D    | A.B.C.D    |
 
 0. Edit this README.md file and add the ip addresses to your forked repository
 0. Make sure your changes are committed and pushed to github.com and then refresh the page.
-0. See the [../git-primer.md](git primer) if you have trouble with this step
