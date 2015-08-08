@@ -30,6 +30,7 @@
     ![Instance details](img/horizon-active.png)
     ![Console tab](img/horizon-console.png)
     ![Console VNC](img/horizon-console2.png)
+    
 
   0. Use `ssh` to access and interact with the newly launched instance
 

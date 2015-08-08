@@ -2,10 +2,11 @@
 
 ## Setup Github Lab Repository
 
-0. [Create a Github account](https://github.com/join) or [Login](https://github.com/login)
+0. In a new tab, [Create a Github account](https://github.com/join) or [Login](https://github.com/login)
 
   ![Create an account](img/github-create.png)
     
+0. Return to this tab, refresh, you are now logged in.
 
 0. Star and this lab's repository
 
