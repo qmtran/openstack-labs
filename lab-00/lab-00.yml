@@ -1,0 +1,6 @@
+---
+- hosts: host1:host2
+  tasks:
+   - name: Update & Upgrade
+     apt: update_cache=yes upgrade=yes
+     sudo: yes
