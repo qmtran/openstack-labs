@@ -28,6 +28,6 @@
 
   0. Use `ssh` to access and interact with the newly launched instance
 
-    * Ensure you are currently ssh'ed into the controller instance (host1)
+    * Ensure you are currently ssh'ed into the controller instance
     * If not follow steps from previous lab
     * `ssh cirros@10.0.0.2` (password `cubswin:)`)
