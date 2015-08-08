@@ -20,6 +20,6 @@
      ![Add Rule](img/security-add.png) 
      ![Create Rule](img/security-ssh.png) 
 
-  0. Create another rule for HTTPS
+  0. Create another rule for HTTPS, the resulting Security Group should look like this
 
      ![New Rules](img/security-rules.png)
