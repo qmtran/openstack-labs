@@ -14,9 +14,54 @@
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
   0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
-  0. Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
+  0.  Edit the 'local.conf` file.  The sample config file will have useful comments which are not replicated below.
+
     
-     `nano local.conf` or `vim local.conf`
+      `nano local.conf` or `vim local.conf`
+
+      ``` shell
+        [[local|localrc]]
+
+        HOST_IP=W.X.Y.Z # The compute node's internal IP address
+        FIRST_HOST=W.X.Y.Z # The controller's internal IP address 
+        FIRST_HOST_PUBLIC=A.B.C.D # The controller's public IP address 
+
+        SERVICE_HOST=$FIRST_HOST
+        MYSQL_HOST=$FIRST_HOST
+        RABBIT_HOST=$FIRST_HOST
+        GLANCE_HOSTPORT=$FIRST_HOST:9292
+
+        ENABLED_SERVICES=n-cpu,n-net,n-api,c-vol
+
+        NOVA_VNC_ENABLED=True
+        NOVNCPROXY_URL="http://$FIRST_HOST_PUBLIC:6080/vnc_auto.html"
+        VNCSERVER_LISTEN=$HOST_IP
+        VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+
+        DATABASE_TYPE=mysql
+
+        # tokens and passwords
+        SERVICE_TOKEN=DKS3MQMX72MSLQP231N
+        ADMIN_PASSWORD=supersecret
+        MYSQL_PASSWORD=radicallyrelational
+        RABBIT_PASSWORD=rasciallyrabbit
+        SERVICE_PASSWORD=supersecret
+
+        FLAT_INTERFACE=eth0
+
+        # private IPs
+        FIXED_RANGE=10.0.0.0/16
+        FIXED_NETWORK_SIZE=65534
+        # public IPs
+        FLOATING_RANGE=192.168.0.0/24
+
+        MULTI_HOST=True
+
+        LOGFILE=$DEST/logs/stack.sh.log
+        LOGDAYS=2
+      ``` 
+     
+      * Be sure to remove config lines from the sample config about Swift and Tempest
 
   0. Run `ip addr show`
   0. Run stack.sh, this will take a little bit less time that Lab 1
