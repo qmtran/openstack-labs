@@ -23,5 +23,5 @@ Public   | W.X.Y.Z    | W.X.Y.Z    |
 Internal | A.B.C.D    | A.B.C.D    |
 
 0. Edit this README.md file and add the ip addresses to your forked repository.
-0. You can make these changes in the github webpage or from your checkedout version.
-0. Make sure your changes are committed and pushed to github.com and then refresh the page.
+  * You can make these changes in the github webpage or from your checkedout version.
+  * Make sure your changes are committed and pushed to github.com and then refresh the page.
