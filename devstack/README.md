@@ -9,8 +9,12 @@ Lab Objectives:
   0. Launch an instance from the Horizon Interface
   0. Install a DevStack compute node
 
-## Lab 0 - Document your instances public IP addresses
+## Lab 0 - Document IP addresses
  
-| Controller | Compute    |
-| ---------- | ---------- |
-| W.X.Y.Z    | W.X.Y.Z    |
+Your instructor will provide two IP addresses for this lab. 
+Space is also provided for internal IP addresses which will be available during the course of the labs.
+
+         | Controller | Compute    |
+-------- | ---------- | ---------- |
+Public   | W.X.Y.Z    | W.X.Y.Z    |
+Internal | A.B.C.D    | A.B.C.D    |
