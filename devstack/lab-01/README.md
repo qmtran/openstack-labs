@@ -71,4 +71,9 @@
     ![Image of login](img/horizon-login.png)
     
     ![Image Dashboard](img/horizon-dashboard.png)
+
+    :red_circle: TODO items from interface
+
+    | Item 1 | |
+    | Item 2 | |
     
