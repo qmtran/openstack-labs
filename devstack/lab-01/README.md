@@ -8,21 +8,16 @@ Notes for implementation:
 * is the time waiting for devstack to install useful for students or should we do it for them?  
 
 ## Connect to your instance:
-  0. `chmod 400 student-key-###.pem`
-  0. `ssh ubuntu@W.X.Y.Z -i student-key-###.pem`
-  0. `sudo whoami`
+  0. `chmod 400 student.pem`
+  0. `ssh ubuntu@W.X.Y.Z -i student.pem`
+  0. `sudo whoami` 
 
 ## Install DevStack:
   0. `sudo apt-get install git`
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  0. `ip addr show dev eth0` and record your instance's internal IP address 
-  
-    |Instance Internal IP Address|
-    |----------------------------|
-    |            &nbsp;          |
-    
+  0. `ip addr show dev eth0` and record your instance's internal IP address in the [Lab 0 table](../README.md) 
   0. `nano local.conf` or `vim local.conf`
       
       Edit the 'local.conf` file, it should look like [example-local.conf](example-local.conf) 
