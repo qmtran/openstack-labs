@@ -1,6 +1,6 @@
 # DevStack Lab
 
-A well thoughout over-view paragraph about what this lab is about should go here.
+:red_circle: TODO A well thoughout over-view paragraph about what this lab is about should go here.
 
 Lab Objectives:
 
@@ -8,6 +8,9 @@ Lab Objectives:
   0. Become familiar with the OpenStack Horizon Interface
   0. Launch an instance from the Horizon Interface
   0. Install a DevStack compute node
+  0. Become familiar with adding Security Groups
+  0. Become familiar with adding a Floating IP Address
+  0. Become familiar with the openstack command line utility
 
 ## Lab 0 - Document IP addresses
  
