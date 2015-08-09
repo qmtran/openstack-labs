@@ -76,4 +76,5 @@
      ![Nova Floating IP](img/nova-float.png)
      ![Nova List](img/nova-list2.png)
 
+#### [Next Lab](../lab-06)    
 
