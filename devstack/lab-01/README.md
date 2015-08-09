@@ -6,7 +6,7 @@
 
 ## Connect to your _controller_ instance:
   0. `chmod 400 student.pem`
-  0. `ssh ubuntu@W.X.Y.Z -i student.pem`
+  0. `ssh ubuntu@CON.TRO.LL.ER -i student.pem`
   0. `sudo whoami` 
 
 ## Install DevStack:

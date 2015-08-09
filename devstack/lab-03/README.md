@@ -5,7 +5,7 @@
   0. Install a DevStack Compute node
 
 ## Connect to your _compute_ instance:
-  0. `ssh ubuntu@W.X.Y.Z -i student.pem`
+  0. `ssh ubuntu@CO.MP.UT.E -i student.pem`
   0. `sudo whoami` 
 
 ## Install DevStack:

@@ -17,10 +17,10 @@ Lab Objectives:
 Your instructor will provide two IP addresses for this lab. 
 Space is also provided for internal IP addresses which will be filled out during the labs.
 
-         | Controller | Compute    |
--------- | ---------- | ---------- |
-Public   | W.X.Y.Z    | W.X.Y.Z    |
-Internal | A.B.C.D    | A.B.C.D    |
+         | Controller    | Compute     |
+-------- | ------------- | ----------- |
+Public   | CON.TRO.LL.ER | CO.MP.UT.E  |
+Internal | A.B.C.D       | A.B.C.D     |
 
 0. Edit this README.md file and add the ip addresses to your forked repository.
   * You can make these changes in the github webpage or from your checkedout version.
