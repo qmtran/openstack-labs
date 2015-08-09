@@ -11,14 +11,12 @@
 
 ## Install DevStack:
 
-  For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
 
   0. `sudo yum update -y`
   0. `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
   0. `sudo yum isntall openstack-packstack vim htop -y`
-  0. `packstack --gen-answer-file packstack-answers.txt`
-
   0. Enable root ssh access
+
      0. Permit root login and restart ssh daemon
       
         * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
@@ -44,3 +42,18 @@
         * `cat /home/centos/.ssh/id_rsa.pub | sudo tee -a /root/.ssh/authorized_keys` - append controllers key
         * `ssh localhost` - expected success
 
+  0. `packstack --gen-answer-file packstack-answers.txt`
+  0. Edit packstack answers to tweak install configuration 
+  
+     * `vim packstack-answers.txt` or `nano packstack-answers.txt`
+
+       ```
+         CONFIG_CONTROLLER_HOST=<CONTROLLER IP> 
+         CONFIG_KEYSTONE_ADMIN_PW=supersecret
+
+       ```
+
+
+  0. `packstack --answers-file packstack-answers.txt`
+
+  For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
