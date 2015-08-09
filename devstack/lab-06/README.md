@@ -6,5 +6,5 @@
   0. Become familiar with removing a compute node
 
 
-  :red_circle: TODO evaluate if this is appropriate for the level of lab complexity
-  :red_circle: TODO Write this
+  * :red_circle: TODO evaluate if this is appropriate for the level of lab complexity
+  * :red_circle: TODO Write this
