@@ -37,3 +37,5 @@
     * Ensure you are currently ssh'ed into the controller instance
     * If not follow steps from previous lab
     * `ssh cirros@10.0.0.2` (password `cubswin:)`)
+
+#### [Next Lab](../lab-03)    
