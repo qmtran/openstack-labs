@@ -17,7 +17,7 @@
 
      ![Create Project](img/os-project.png)
 
-  0. `user create --email ubuntu@localhost --project Alta3Project --password supersecret student1
+  0. `user create --email ubuntu@localhost --project Alta3Project --password supersecret student1`
 
      ![Create User](img/os-user.png)
 
@@ -33,7 +33,7 @@
 
   0. `host list` - openstack services and the host they are running on
 
-     ![Hosts](img/os-hosts.png) 
+     ![Hosts](img/os-host.png) 
 
   0. `image list` - glance OS images (from basic stack.sh install)
 
