@@ -60,7 +60,6 @@
      ![Create Router](img/create-router5.png)
      ![Create Router](img/create-router6.png)
      ![Create Router](img/create-router7.png)
-     ![Create Router](img/create-router8.png)
 
   0. Set the Gateway for this network
 
