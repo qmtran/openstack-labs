@@ -5,11 +5,15 @@
   0. Install a DevStack controller
 
 ## Connect to your _controller_ instance:
+
   0. `chmod 400 student.pem`
   0. `ssh ubuntu@<CONTROLLER IP> -i student.pem`
   0. `sudo whoami` 
 
 ## Install DevStack:
+
+:red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
+
   0. `sudo apt-get install git`
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`

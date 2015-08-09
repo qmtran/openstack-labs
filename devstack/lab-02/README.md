@@ -1,4 +1,4 @@
-# Lab 2 - Devstack Horizon Interface
+# Lab 2 - DevStack Horizon Interface
 
   Lab Objectives:
 
