@@ -56,7 +56,20 @@
 
        ```
 
-
   0. `packstack --answers-file packstack-answers.txt`
+
+  0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of your instance, explore the accessible pages and fill in the table of information
+
+    ![Image of login](img/horizon-login.png)
+    
+    ![Image Dashboard](img/horizon-dashboard.png)
+
+    :red_circle: TODO items from interface
+
+    | Info to find | Value |
+    | -------------| ----- |
+    | Item 1 | |
+    | Item 2 | |
+    
 
   For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
