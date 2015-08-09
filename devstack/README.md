@@ -19,7 +19,7 @@ Space is also provided for internal IP addresses which will be filled out during
 
          | Controller    | Compute     |
 -------- | ------------- | ----------- |
-Public   | CON.TRO.LL.ER | CO.MP.UT.E  |
+Public   | CONTROLLER IP | COMPUTE IP  |
 Internal | A.B.C.D       | A.B.C.D     |
 
 0. Edit this README.md file and add the ip addresses to your forked repository.

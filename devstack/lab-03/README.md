@@ -5,7 +5,7 @@
   0. Install a DevStack Compute node
 
 ## Connect to your _compute_ instance:
-  0. `ssh ubuntu@CO.MP.UT.E -i student.pem`
+  0. `ssh ubuntu@<COMPUTE IP> -i student.pem`
   0. `sudo whoami` 
 
 ## Install DevStack:
@@ -85,3 +85,4 @@
      ![Ping Pong](img/horizon-ping.png)
      ![Ping Pong](img/horizon-pong.png)
       
+#### [Next Lab](../lab-04)    
