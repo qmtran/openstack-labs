@@ -40,6 +40,6 @@
   * :red_circle: TODO fill this out with instructions
 
 
-### Continue to either:
-* #### [DevStack](../devstack)
-#### [RDO](../rdo)
+#### Continue to either:
+* **[DevStack](../devstack)**
+* **[RDO](../rdo)**
