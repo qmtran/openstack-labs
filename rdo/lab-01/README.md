@@ -42,7 +42,10 @@
         * `cat /home/centos/.ssh/id_rsa.pub | sudo tee -a /root/.ssh/authorized_keys` - append controllers key
         * `ssh localhost` - expected success
 
-  0. `packstack --gen-answer-file packstack-answers.txt`
+  0. Generate a PackStack Config gile (answers)
+
+     * `packstack --gen-answer-file packstack-answers.txt`
+
   0. Edit packstack answers to tweak install configuration 
   
      * `vim packstack-answers.txt` or `nano packstack-answers.txt`
