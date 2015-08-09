@@ -1,22 +1,14 @@
-# Lab 2 - DevStack Horizon Interface
+# Lab 3 - RDO Horizon Interface, Part Deux
 
   Lab Objectives:
 
-  0. Become familiar with the OpenStack Horizon Interface
-  0. Launch an instance from the Horizon Interface
-
-## Add a User:
-  
-  :red_circle: TODO, currently broken in DevStack, launching instance should change to be user logged in
-
-## Add a Project:
-
-  :red_circle: TODO, currently broken in DevStack
+  0. Launch an instance from the Horizon interface
 
 ## Launch an Instance:
 
   0. Open the Horizon interface (navigate your browser to the public IP address of the controller)
-  0. Project > Compute > Instances > Launch Instance
+  0. Login to the Horizon interface as the user created in [Lab 2](../lab-02)
+  0. Navigate to: Project > Compute > Instances > Launch Instance
   
     ![Launch Instance](img/horizon-launch.png)
 
@@ -37,5 +29,3 @@
     * Ensure you are currently ssh'ed into the controller instance
     * If not follow steps from previous lab
     * `ssh cirros@10.0.0.2` (password `cubswin:)`)
-
-#### [Next Lab](../lab-03)    

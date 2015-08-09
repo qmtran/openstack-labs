@@ -1,9 +1,8 @@
-# Lab 2 - Devstack Horizon Interface
+# Lab 2 - RDO Horizon Interface
 
   Lab Objectives:
 
   0. Become familiar with the OpenStack Horizon Interface
-  0. Launch an instance from the Horizon Interface
 
 ## Add a Project:
 
@@ -71,4 +70,4 @@
      ![Create Router](img/create-router10.png)
      ![Create Router](img/create-router11.png)
 
-
+#### [Next Lab](../lab-03)    
