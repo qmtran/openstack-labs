@@ -46,7 +46,6 @@
      ![Catalog](img/os-catalog.png) 
 
   0. `help` - all commands
-  0. `exit`
 
 ## Create a Project and User:
 
@@ -57,6 +56,8 @@
   0. `user create --email ubuntu@localhost --project Alta3Project --password supersecret student1`
 
      ![Create User](img/os-user.png)
+
+  0. `exit`
 
 ## Boot an Instance and assign a Floating IP:
 
@@ -69,7 +70,7 @@
      ![Nova List](img/nova-list.png)
 
   0. `nova floating-ip-create`
-  0. `nova floating-ip-associate W.X.Y.Z cliboot` 
+  0. `nova floating-ip-associate W.X.Y.Z cliboot` (use the created IP)
 
 
      ![Nova Floating IP](img/nova-float.png)
