@@ -41,5 +41,5 @@
 
 
 ### Continue to either:
-#### [DevStack](../devstack)
+* #### [DevStack](../devstack)
 #### [RDO](../rdo)
