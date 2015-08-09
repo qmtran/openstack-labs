@@ -2,7 +2,7 @@
 
   Lab Objectives:
 
-  0. Install a DevStack Compute node
+  0. Install and link a DevStack Compute node
 
 ## Connect to your _compute_ instance:
   0. `ssh ubuntu@<COMPUTE IP> -i student.pem`

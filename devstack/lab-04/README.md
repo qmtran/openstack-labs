@@ -15,6 +15,7 @@
 
   0. From the hypervisor that the instance is running inside ssh into the node using the Floating IP address 
 
+     :red_circle: TODO: get a screen shot of this
      ![SSH Test](img/floating-ssh.png)
 
 ## Create and apply a Security Group
@@ -51,3 +52,4 @@
 
      ![Cirros1 to Cirros2](img/pingpong.png)
 
+#### [Next Lab](../lab-05)    
