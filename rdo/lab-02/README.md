@@ -63,12 +63,12 @@
 
   0. Set the Gateway for this network
 
+     ![Create Router](img/create-router8.png)
      ![Create Router](img/create-router9.png)
-     ![Create Router](img/create-router10.png)
 
   0. View the Network Topology and Networks page and verify configurations
 
+     ![Create Router](img/create-router10.png)
      ![Create Router](img/create-router11.png)
-     ![Create Router](img/create-router12.png)
 
 
