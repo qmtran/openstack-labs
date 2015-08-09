@@ -1,5 +1,7 @@
 ---
 - hosts: dev.controller
+  vars:
+    host_ip: "{{ ansible_default_ipv4.address }}"
   tasks:
    - name: Record public IP
      shell: wget -qO- http://ipecho.net/plain ; echo
@@ -27,6 +29,7 @@
      shell: ./unstack.sh chdir=/home/ubuntu/devstack
      async: 120
      poll: 5
+     ignore_errors: yes
 
    - name: Install DevStack (async)
      shell: ./stack.sh chdir=/home/ubuntu/devstack

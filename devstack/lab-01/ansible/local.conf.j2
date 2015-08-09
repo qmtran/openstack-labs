@@ -1,5 +1,7 @@
 [[local|localrc]]
 
+HOST_IP={{ host_ip }}
+
 SERVICE_TOKEN=DKS3MQMX72MSLQP231N
 ADMIN_PASSWORD=supersecret
 MYSQL_PASSWORD=radicallyrelational
@@ -12,7 +14,7 @@ FLAT_INTERFACE=eth0
 FIXED_RANGE=10.0.0.0/16
 FIXED_NETWORK_SIZE=65534
 # public IPs
-FLOATING_RANGE=192.168.0.0/24
+FLOATING_RANGE=192.168.1.128/25
 
 NOVA_VNC_ENABLED=True
 NOVNCPROXY_URL="http://{{ public_ip.stdout }}:6080/vnc_auto.html"

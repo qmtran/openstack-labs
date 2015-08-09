@@ -6,12 +6,10 @@
      register: public_ip
 
 - hosts: dev.compute
-
   vars:
     host_ip: "{{ ansible_default_ipv4.address }}"
     first_ip: "{{ hostvars['dev.controller'].ansible_default_ipv4.address }}"
     first_public_ip: "{{ hostvars['dev.controller'].public_ip.stdout }}"
-
   tasks:
    - name: Install tools
      apt: name={{item}} state=latest
@@ -35,6 +33,7 @@
      shell: ./unstack.sh chdir=/home/ubuntu/devstack
      async: 120
      poll: 5
+     ignore_errors: yes
 
    - name: Install DevStack compute node (async)
      shell: ./stack.sh chdir=/home/ubuntu/devstack
