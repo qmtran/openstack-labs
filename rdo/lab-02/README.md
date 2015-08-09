@@ -37,9 +37,9 @@
 
      > :white_check_mark: **Additional Info**:
      >
-     > The Allocation Pools is the start,end addresses for the pools.
+     > The Allocation Pools is the `start,end` addresses for the pools.
      > The entry form for this field does not parse spaces.
-     > Example Pool: `192.168.1.100,192.168.1.120
+     > Example Pool: `192.168.1.100,192.168.1.120`
 
      ![Create Network](img/create-network5.png)
 
@@ -53,9 +53,23 @@
   0. Either click on "View Router Details" or choose our new router from the list on Project > Network > Routers
 
      ![Create Router](img/create-router3.png)
+     ![Create Router](img/create-router4.png)
 
   0. Add an interface to the new router
 
-     ![Create Router](img/create-router4.png)
      ![Create Router](img/create-router5.png)
      ![Create Router](img/create-router6.png)
+     ![Create Router](img/create-router7.png)
+     ![Create Router](img/create-router8.png)
+
+  0. Set the Gateway for this network
+
+     ![Create Router](img/create-router9.png)
+     ![Create Router](img/create-router10.png)
+
+  0. View the Network Topology and Networks page and verify configurations
+
+     ![Create Router](img/create-router11.png)
+     ![Create Router](img/create-router12.png)
+
+
