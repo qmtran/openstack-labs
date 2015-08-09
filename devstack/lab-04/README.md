@@ -13,7 +13,9 @@
      ![Add Floadint IP](img/floating-add.png)
      ![Add Floadint IP](img/floating-add2.png)
 
-  0. Test that this 
+  0. From the hypervisor that the instance is running inside ssh into the node using the Floating IP address 
+
+     ![SSH Test](img/floating-ssh.png)
 
 ## Create and apply a Security Group
 
@@ -41,4 +43,11 @@
      ![Add Security Group](img/security-associate2.png)
 
      Click the `+` on the Basic line and then Save
+
+## Rinse && Repeat
+
+  0. Associate a Floating IP and Security Group with your other instance
+  0. Log in to both and test connectivity between Floating IP addresses for your other instance
+
+     ![Cirros1 to Cirros2](img/pingpong.png)
 
