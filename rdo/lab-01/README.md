@@ -2,15 +2,16 @@
 
   Lab Objectives:
 
-  0. Install a RDO controller
+  0. Install a PackStack (RDO) controller
 
 ## Connect to your _controller_ instance:
   0. `chmod 400 student.pem`
   0. `ssh centos@<CONTROLLER IP> -i student.pem`
   0. `sudo whoami` 
 
-## Install DevStack:
+## Install PackStack:
 
+:red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
 
   0. `sudo yum update -y`
   0. `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
@@ -73,3 +74,5 @@
     
 
   For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
+  
+#### [Next Lab](../lab-02)    
