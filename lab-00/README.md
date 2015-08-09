@@ -38,3 +38,8 @@
 ## Checkout your forked repository
 
   * :red_circle: TODO fill this out with instructions
+
+
+### Continue to either:
+#### [DevStack](../devstack)
+#### [RDO](../rdo)
