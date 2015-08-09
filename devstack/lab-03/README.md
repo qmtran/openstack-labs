@@ -13,10 +13,6 @@
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  0.  Record your instance's internal IP address in the [Lab 0 table](../README.md) 
-     
-      `ip addr show dev eth0` 
-     
   0.  Edit the 'local.conf` file.  The sample config file will have useful comments which are not replicated below.
 
     
