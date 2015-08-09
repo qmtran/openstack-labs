@@ -4,7 +4,7 @@
 
   0. Install a DevStack controller
 
-## Connect to your **controller** instance:
+## Connect to your _controller_ instance:
   0. `chmod 400 student.pem`
   0. `ssh ubuntu@W.X.Y.Z -i student.pem`
   0. `sudo whoami` 
