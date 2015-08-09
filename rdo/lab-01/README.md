@@ -17,7 +17,7 @@
   0. `sudo yum isntall openstack-packstack vim htop -y`
   0. Enable root ssh access
 
-     0. Permit root login and restart ssh daemon
+     0. Alter SSH Daemon config to permit root login and restart it to take effect
       
         * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
        
