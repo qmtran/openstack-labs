@@ -10,7 +10,7 @@ Lab Objectives:
   0. Install a DevStack compute node
   0. Become familiar with adding a Floating IP Address
   0. Become familiar with adding Security Groups
-  0. Become familiar with the openstack command line utility
+  0. Become familiar with the openstack command line utilities
 
 ## Lab 0 - Document Lab IP addresses
  

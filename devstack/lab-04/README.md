@@ -21,7 +21,7 @@
 ## Create and apply a Security Group
 
   0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of the controller
-  0. :red_circle: TODO login as user?
+  0. :red_circle: TODO: login as user?
   0. Navigate to: Project > Compute > Access > Create Security Group
 
      ![Create Security Group](img/security-create.png)
@@ -33,7 +33,7 @@
      ![Add Rule](img/security-add.png) 
      ![Create Rule](img/security-ssh.png) 
 
-  0. Create another rule for HTTPS, the resulting Security Group should look like this
+  0. Create another rule for HTTPS, the resulting Security Group should look like this:
 
      ![New Rules](img/security-rules.png)
   
@@ -48,8 +48,9 @@
 ## Rinse && Repeat
 
   0. Associate a Floating IP and Security Group with your other instance
-  0. Log in to both and test connectivity between Floating IP addresses for your other instance
+  0. Log in to both and test connectivity between both Floating IP addresses for your other instance
 
+     :red_circle: TODO: get a screenshot of this
      ![Cirros1 to Cirros2](img/pingpong.png)
 
 #### [Next Lab](../lab-05)    

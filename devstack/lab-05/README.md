@@ -1,8 +1,8 @@
-# Lab 5 - DevStack cli 
+# Lab 5 - DevStack CLI
 
   Lab Objectives:
 
-  0. Become familiar with the openstack command line utility
+  0. Become familiar with the openstack command line utilities
 
 ## Connect to controller CLI:
 
@@ -15,7 +15,8 @@
 
   0. `endpoint list` - service endpoints and their ID's
   
-     :red_circle: TODO ![Endpoints](img/os-endpoint.png) 
+     :red_circle: TODO: DevStack Broken? get screen shot 
+     ![Endpoints](img/os-endpoint.png) 
 
   0. `hypervisor list` - compute hypervisors
 
@@ -72,14 +73,7 @@
   0. `nova floating-ip-create`
   0. `nova floating-ip-associate W.X.Y.Z cliboot` (use the created IP)
 
-
      ![Nova Floating IP](img/nova-float.png)
      ![Nova List](img/nova-list2.png)
-## Switch users for a few other commands:
-
-  :red_circle: TODO Make an instace under student1, can't figure out how to use nova to make an instance _AS_ a user
-  0. `source openrc student1`
-  0. `openstack`
-  0. `server list` (list instances)
 
 
