@@ -21,10 +21,10 @@
   0. Enable root ssh access
      0. Permit root login and restart ssh daemon
       
-        * `sudo vim /etc/ssh/sshd_config`
-        * `sudo nano /etc/ssh/sshd_config`
+        * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
        
           ``` 
+            ...
             # Authentication:
 
             #LoginGraceTime 2m
@@ -32,6 +32,7 @@
             #StrictModes yes
             #MaxAuthTries 6
             #MaxSessions 10
+            ...
           ```
 
         *  `sudo service sshd restart`
