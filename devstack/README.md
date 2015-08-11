@@ -18,7 +18,7 @@ Your instructor will provide two IP addresses for this lab.
 
          | Controller    | Compute     |
 -------- | ------------- | ----------- |
-Public   | CONTROLLER IP | COMPUTE IP  |
+Public   | W.X.Y.Z       | W.X.Y.Z     |
 Internal | A.B.C.D       | A.B.C.D     |
 
 0. Edit this README.md file and add the ip addresses to your forked repository.
