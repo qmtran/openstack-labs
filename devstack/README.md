@@ -14,7 +14,7 @@ Lab Objectives:
 
 ## Lab 0 - Document Lab IP addresses
  
-Your instructor will provide two IP addresses for this lab. 
+Your instructor will provide two public IP addresses for this lab. 
 
          | **Controller**    | **Compute**     |
 -------- | ------------- | ----------- |
