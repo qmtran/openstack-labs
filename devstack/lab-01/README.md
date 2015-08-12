@@ -18,7 +18,7 @@
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  0.  Edit the 'local.conf` file.  The sample config file will have useful comments which are not replicated below.
+  0.  Edit the 'local.conf` file to match the complete config provided below.  Read the comments provided in the sample config file.
       
       `nano local.conf` or `vim local.conf`
       
@@ -33,21 +33,7 @@
         SERVICE_PASSWORD=supersecret
 
         FLAT_INTERFACE=eth0
-
-        # private IPs
-        FIXED_RANGE=10.0.0.0/16
-        FIXED_NETWORK_SIZE=65534
-
-        # public IPs
-        FLOATING_RANGE=192.168.0.0/24
         
-        NOVA_VNC_ENABLED=True
-        NOVNCPROXY_URL="http://<CONTROLLER EXTERNAL IP>:6080/vnc_auto.html"
-        VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
-        VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
-
-        MULTI_HOST=True
-
         # $DEST is the install location (default /opt/stack)
         LOGFILE=$DEST/logs/stack.sh.log
         LOGDAYS=2
@@ -56,6 +42,18 @@
         SWIFT_REPLICAS=1
         SWIFT_DATA_DIR=$DEST/data
         enable_service tempest
+        
+        ## Configs not provided in sample
+        FIXED_RANGE=10.0.0.0/16 # private IP range
+        FIXED_NETWORK_SIZE=65534
+        FLOATING_RANGE=192.168.0.0/24 # public IP range
+        
+        NOVA_VNC_ENABLED=True
+        NOVNCPROXY_URL="http://<CONTROLLER EXTERNAL IP>:6080/vnc_auto.html"
+        VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
+        VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+
+        MULTI_HOST=True
       ```
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
