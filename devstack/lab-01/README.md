@@ -43,7 +43,7 @@
         SWIFT_DATA_DIR=$DEST/data
         enable_service tempest
         
-        ## Configs not provided in sample
+        ## -- Configs not provided in sample -- ##
         FIXED_RANGE=10.0.0.0/16 # private IP range
         FIXED_NETWORK_SIZE=65534
         FLOATING_RANGE=192.168.0.0/24 # public IP range
@@ -54,6 +54,7 @@
         VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
 
         MULTI_HOST=True
+        ## ----------------------------------- ##
       ```
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
