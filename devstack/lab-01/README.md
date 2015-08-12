@@ -18,7 +18,7 @@
   0. `git clone https://git.openstack.org/openstack-dev/devstack`
   0. `cd devstack`
   0. `cp samples/local.conf local.conf`
-  0.  Edit the 'local.conf` file to match the complete config provided below.  Read the comments provided in the sample config file.
+  0.  Edit the sample 'local.conf` file to match the complete config provided below; additional configurations not providied in the sample are called out at the end.  Read the comments provided in the sample config file.  Be sure to replace the **<CONTROLLER PUBLIC IP>** with the appropriate IP address.
       
       `nano local.conf` or `vim local.conf`
       
@@ -48,7 +48,7 @@
         FLOATING_RANGE=192.168.0.0/24 # public IP range
         
         NOVA_VNC_ENABLED=True
-        NOVNCPROXY_URL="http://<CONTROLLER EXTERNAL IP>:6080/vnc_auto.html"
+        NOVNCPROXY_URL="http://<CONTROLLER PUBLIC IP>:6080/vnc_auto.html"
         VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
         VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
 
