@@ -29,7 +29,7 @@
         SERVICE_TOKEN=DKS3MQMX72MSLQP231N # an alphanumeric token
         ADMIN_PASSWORD=supersecret
         MYSQL_PASSWORD=radicallyrelational
-        RABBIT_PASSWORD=rasciallyrabbit
+        RABBIT_PASSWORD=rascallyrabbit
         SERVICE_PASSWORD=supersecret
 
         FLAT_INTERFACE=eth0
