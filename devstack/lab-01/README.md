@@ -31,8 +31,6 @@
         MYSQL_PASSWORD=radicallyrelational
         RABBIT_PASSWORD=rascallyrabbit
         SERVICE_PASSWORD=supersecret
-
-        FLAT_INTERFACE=eth0
         
         # $DEST is the install location (default /opt/stack)
         LOGFILE=$DEST/logs/stack.sh.log
@@ -44,6 +42,7 @@
         enable_service tempest
         
         ## -- Configs not provided in sample -- ##
+        FLAT_INTERFACE=eth0
         FIXED_RANGE=10.0.0.0/16 # private IP range
         FIXED_NETWORK_SIZE=65534
         FLOATING_RANGE=192.168.0.0/24 # public IP range
