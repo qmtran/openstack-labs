@@ -69,6 +69,10 @@ LOGDAYS=2
     
      `./stack.sh 2>&1 | tee stack.log`
 
+    > :white_check_mark: **Additional Info**:
+    >
+    > * `stack.sh`-ing a compute node should take much less time than our previous full devstack install
+
   0. Run `ip addr show` again and notice the added interfaces and bridges
   0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of the controller
   0. Admin > System > Hypervisors and marvel at the number of Hypervisors
