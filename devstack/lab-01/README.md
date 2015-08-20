@@ -47,9 +47,12 @@ FIXED_RANGE=10.0.0.0/16 # private IP range
 FIXED_NETWORK_SIZE=65534
 FLOATING_RANGE=192.168.0.0/24 # public IP range
         
+# Please replace x.x.x.x with the controller public IP
+NOVNCPROXY_URL="http://x.x.x.x:6080/vnc_auto.html"
 NOVA_VNC_ENABLED=True
-NOVNCPROXY_URL="http://<CONTROLLER PUBLIC IP>:6080/vnc_auto.html"
-VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
+
+# Please replace x.x.x.x with the controller internal IP
+VNCSERVER_LISTEN=x.x.x.x
 VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
 
 MULTI_HOST=True
