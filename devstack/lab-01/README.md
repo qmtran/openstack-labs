@@ -23,37 +23,37 @@
       `nano local.conf` or `vim local.conf`
       
       ``` shell
-        [[local|localrc]]
+[[local|localrc]]
 
-        # tokens and passwords
-        SERVICE_TOKEN=DKS3MQMX72MSLQP231N # an alphanumeric token
-        ADMIN_PASSWORD=supersecret
-        MYSQL_PASSWORD=radicallyrelational
-        RABBIT_PASSWORD=rascallyrabbit
-        SERVICE_PASSWORD=supersecret
+# tokens and passwords
+SERVICE_TOKEN=DKS3MQMX72MSLQP231N # an alphanumeric token
+ADMIN_PASSWORD=supersecret
+MYSQL_PASSWORD=radicallyrelational
+RABBIT_PASSWORD=rascallyrabbit
+SERVICE_PASSWORD=supersecret
         
-        # $DEST is the install location (default /opt/stack)
-        LOGFILE=$DEST/logs/stack.sh.log
-        LOGDAYS=2
+# $DEST is the install location (default /opt/stack)
+LOGFILE=$DEST/logs/stack.sh.log
+LOGDAYS=2
 
-        SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
-        SWIFT_REPLICAS=1
-        SWIFT_DATA_DIR=$DEST/data
-        enable_service tempest
+SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
+SWIFT_REPLICAS=1
+SWIFT_DATA_DIR=$DEST/data
+enable_service tempest
         
-        ## -- Configs not provided in sample -- ##
-        FLAT_INTERFACE=eth0
-        FIXED_RANGE=10.0.0.0/16 # private IP range
-        FIXED_NETWORK_SIZE=65534
-        FLOATING_RANGE=192.168.0.0/24 # public IP range
+## -- Configs not provided in sample -- ##
+FLAT_INTERFACE=eth0
+FIXED_RANGE=10.0.0.0/16 # private IP range
+FIXED_NETWORK_SIZE=65534
+FLOATING_RANGE=192.168.0.0/24 # public IP range
         
-        NOVA_VNC_ENABLED=True
-        NOVNCPROXY_URL="http://<CONTROLLER PUBLIC IP>:6080/vnc_auto.html"
-        VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
-        VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+NOVA_VNC_ENABLED=True
+NOVNCPROXY_URL="http://<CONTROLLER PUBLIC IP>:6080/vnc_auto.html"
+VNCSERVER_LISTEN=<CONTROLLER INTERNAL IP>
+VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
 
-        MULTI_HOST=True
-        ## ----------------------------------- ##
+MULTI_HOST=True
+## ----------------------------------- ##
       ```
 
   0. Run stack.sh, this will take awhile, see [common errors](common-errors.md) if anything fails.
