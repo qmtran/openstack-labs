@@ -17,11 +17,10 @@
 
     
       `nano local.conf` or `vim local.conf`
-
-``` shell
-[[local|localrc]]
-
-# Please replace x.x.x.x with the compute node's internal IP address
+      ``` shell
+      [[local|localrc]]
+      
+      # Please replace x.x.x.x with the compute node's internal IP address
 HOST_IP=x.x.x.x 
 # Please replace x.x.x.x with the controller's internal IP address 
 FIRST_HOST=x.x.x.x
