@@ -67,7 +67,7 @@
      ![Nova Boot](img/nova-boot.png)
 
   0. `nova list`
-  1. :red_circle: TODO: this image should be updated to reflect the 3 instances that would now be running, not 2 
+     :red_circle: TODO: this image should be updated to reflect the 3 instances that would now be running, not 2 
 
      ![Nova List](img/nova-list.png)
 
