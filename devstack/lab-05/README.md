@@ -2,7 +2,7 @@
 
   Lab Objectives:
 
-  0. Become familiar with the openstack command line utilities
+  0. The objective of this lab is to demonstrate that any mouseclicks made in the Openstack GUI may also be issued from the Openstack CLI. After this lab, you should feel familiar with the openstack command line utilities.
 
 ## Connect to controller CLI:
 
@@ -76,6 +76,8 @@
 
      ![Nova Floating IP](img/nova-float.png)
      ![Nova List](img/nova-list2.png)
+     
+  0. Now log back into the DevStack GUI (accessed by navigating to the IP address of your controller on your webbrowser) and make sure that the new instance you populated at the OpenStackCLI (cliboot) is displayed, along with its newly assocaited floating IP address.
 
 #### [Next Lab](../lab-06)    
 
