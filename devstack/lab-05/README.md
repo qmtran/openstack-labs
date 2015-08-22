@@ -2,7 +2,7 @@
 
   Lab Objectives:
 
-  0. The objective of this lab is to demonstrate that any mouseclicks made in the Openstack GUI may also be issued from the Openstack CLI. After this lab, you should feel familiar with the openstack command line utilities.
+  0. The objective of this lab is to demonstrate that any mouseclicks made in the Openstack GUI may also be issued from the OpenStack CLI. We will accomplish this goal by performing the same tasks we just performed in the OpenStack GUI, but instead After this lab, you should feel familiar with launching OpenStack command line utilities.
 
 ## Connect to controller CLI:
 
