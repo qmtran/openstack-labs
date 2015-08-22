@@ -72,7 +72,7 @@
      ![Nova List](img/nova-list.png)
 
   0. `nova floating-ip-create`
-  0. `nova floating-ip-associate W.X.Y.Z cliboot` (use the created IP)
+  0. `nova floating-ip-associate cliboot x.x.x.x cliboot` (replace x.x.x.x with the floating IP created in the above step)
 
      ![Nova Floating IP](img/nova-float.png)
      ![Nova List](img/nova-list2.png)
