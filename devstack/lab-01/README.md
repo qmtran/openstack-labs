@@ -71,6 +71,9 @@ MULTI_HOST=True
     >   * `2>&1` pipes stderr to stdout (allowing us to capture both)
     >   * `|` is a pipe, it sends values to the next command
     >   * `tee` is splits a pipe (like a "T) it sends printed results to a file `stack.log` in addition to printing to the screen
+    > * Logs are also available for `tail -f`-ing at:
+    >   * `/opt/stack/logs/stack.sh.log`
+    >   * `/opt/stack/logs/stack.sh.log.summary`
 
   0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of your instance, explore the accessible pages and fill in the table of information
 
