@@ -1,4 +1,4 @@
-# Lab 0
+# Lab 0 - Lab Environment Setup
 
 ## Setup Github Lab Repository
 
@@ -61,9 +61,9 @@
 | Private IP address | x.x.x.x  | x.x.x.x    | x.x.x.x   |
 
   0. Your instructor will provide you three public IP addresses.  
-     Edit this README.md file and add the public IP addresses for the appropriate hosts.
-    * You can make these changes in the github webpage or from your checkedout version.
-    * Make sure your changes are committed and pushed to github.com and then refresh the page.
+    Edit this README.md file and add the public IP addresses for the appropriate hosts.
+  
+    :red_circle: TODO Pictures of editing a github file
 
   0. Record your instance's internal IP address in the table
     
@@ -72,7 +72,7 @@
 
   0. Set the hostname on each to help with command line differentiation
 
-    * `sudo yum install vim nano -y` # these hosts are super bare-bones
+    * `sudo yum install -y vim nano` # these hosts are super bare-bones
     * `sudo hostname jumper`
     * `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
   
@@ -84,10 +84,23 @@
     bash should look like this now: `[centos@<hostname> ~]` where hostname is the approprate
     instance name
 
+  0. Prevent hostname updates on reboot
+
+    * `sudo vim /etc/cloud/cloud.cfg`
+
+    Comment out these two entries uner `cloud_init_modules`:
+
+    ```
+    - set_hostname
+    - update_hostname
+    ```
+    
+    * `sudo reboot`
+
 ## Checkout your forked repository
 
   0. `ssh centos@<Jumper Public IP> -i student.pem`
-  0. `sudo yum install git -y`
+  0. `sudo yum install -y git`
   0. `git clone https://github.com/<Your username>/openstack-labs"
 
   * :red_circle: TODO fill this out with instructions and screen shots

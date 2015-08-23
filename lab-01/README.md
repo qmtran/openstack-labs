@@ -47,7 +47,7 @@
         * `sudo cat /root/.ssh/authorized_keys` - one more key should be there
         * `ssh root@localhost` - expected success
 
-  0. Generate a PackStack Config gile (answers)
+  0. Generate a PackStack Config file (answers)
 
      * `packstack --gen-answer-file packstack-answers.txt`
 
@@ -58,23 +58,27 @@
        Find these configuration options and replace them with the appropriate values
 
        ```
-       # Please replace x.x.x.x below with the controller public IP
+       # Please replace both x.x.x.x below with the controller public IP
        CONFIG_CONTROLLER_HOST=x.x.x.x
        CONFIG_KEYSTONE_ADMIN_PW=supersecret
+       CONFIG_NOVA_VNCPROXY_HOST=x.x.x.x
        ```
 
-       Nova and VNC are not included by default in the answers file
+       These Nova and VNC are not included by default in the answers file
        Add these configurations to the bottom of the answers file
 
        ```
-       # Please replace x.x.x.x below with the controller public IP
+       # Please replace x.x.x.x below with the controller **public** IP
        NOVNCPROXY_URL="http://x.x.x.x:6080/vnc_auto.html"
        NOVA_VNC_ENABLED=True
 
-       # Please replace x.x.x.x below with the controller internal IP
+       # Please replace x.x.x.x below with the controller **internal** IP
        VNCSERVER_LISTEN=x.x.x.x
-       VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+       VNCSERVER_PROXYCLIENT_ADDRESS=x.x.x.x
        ```
+  
+     :red_circle: run this to make sure configurations got set correctly
+     `cat /etc/nova/nova.conf | grep vnc`
 
 
   0. `packstack --answer-file packstack-answers.txt`
