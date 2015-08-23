@@ -26,13 +26,29 @@
 
     ![Fork this repository](img/github-fork3.png)
 
-    From this point on you can edit and commit changes to your own copy of the lab repository.  You can do this from right inside of github (click edit on any file)
+    From this point on you can edit and commit changes to your own copy 
+    of the lab repository.  You can do this from right inside of github 
+    (click edit on any file)
 
+## Lab environment 
+
+  This lab will utilize three hosts.  Below is a brief description of each host and 
+  what it will be used for 
+
+  ** Jumper **: 
+  
+    A jumper is a simple linux machine you will use as a launching point into the lab environment.  
+    We will ssh into this host in order to connect to all other instances in the lab environments.
+
+  ** Controller **:
+   
+    :red_circle: TODO explain Controller
+
+  ** Compute **: 
+
+    :red_circle: TODO explain Compute
 
 ## Connect to Lab Instances
-
-  A jumper is a simple linux machine you will use as a launching point into the lab environment.  
-  We will ssh into this host in order to connect to all other instances in the lab environments.
 
   **Lab Instance Detials**
 
