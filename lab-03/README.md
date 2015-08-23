@@ -30,3 +30,5 @@
   0. Set the student's project quota to a realistic level, givin the of the available VCP and Memory on our system
   0. View change from the student login on the Overview page
     ![Project Quota](img/project-quota.png)
+
+#### [Continue to the next lab](../lab-04)
