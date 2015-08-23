@@ -27,6 +27,8 @@
     | Total number of Network Agents     |       |
     | Total number of Users              |       |
     | Total number of Project            |       |
+    | Default Project RAM Quota          |       |
+    | Default Project VCPU Quota         |       |
     | Demo Private Subnet Address Range  |       |
     | Demo Router IP address             |       |
     | Demo DHCP IP address               |       |

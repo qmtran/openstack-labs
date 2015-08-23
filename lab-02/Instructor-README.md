@@ -12,6 +12,8 @@
 | Total number of Network Agents     | System > System Information > Network Agents |
 | Total number of Users              | Identity > Users |
 | Total number of Project            | Identity > Projects |
+| Default Project RAM Quota          | System > Defaults |
+| Default Project VCPU Quota         | System > Defaults |
 | Demo Private Subnet Address Range  | System > Network > Demo |
 | Demo Router IP address             | System > Network > Demo > Ports |
 | Demo DHCP IP address               | System > Network > Demo > Ports |
