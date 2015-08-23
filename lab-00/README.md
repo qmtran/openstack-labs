@@ -60,7 +60,8 @@
 | Public IP address  | x.x.x.x  | x.x.x.x    | x.x.x.x   |
 | Private IP address | x.x.x.x  | x.x.x.x    | x.x.x.x   |
 
-  0. Edit this README.md file and add the ip addresses to your forked repository.
+  0. Your instructor will provide you three public IP addresses.  
+     Edit this README.md file and add the public IP addresses for the appropriate hosts.
     * You can make these changes in the github webpage or from your checkedout version.
     * Make sure your changes are committed and pushed to github.com and then refresh the page.
 
@@ -74,15 +75,14 @@
     * `sudo yum install vim nano -y` # these hosts are super bare-bones
     * `sudo hostname jumper`
     * `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
-    
-    ```
-    jumper
-    ```
+  
+      the content of the file should be the single, lowercase, name of the instance    
 
     * `exit`
     * `ssh root@<Public IP Address> -i student.pem`
 
-    bash should look like this now: `[centos@jumper ~]`
+    bash should look like this now: `[centos@<hostname> ~]` where hostname is the approprate
+    instance name
 
 ## Checkout your forked repository
 
