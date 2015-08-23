@@ -29,4 +29,4 @@
     | Demo Router IP address             |       |
     | Demo DHCP IP address               |       |
 
-#### [Next Lab](../lab-03)    
+#### [Continue to the next lab](../lab-03)

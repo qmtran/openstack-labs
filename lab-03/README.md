@@ -1,3 +1,8 @@
+# Lab 2 - RDO Horizon Interface
+
+  Lab Objectives:
+
+  0. Demonstrate the ability to create Users and Projects from the Horizon Web Interface
 
 ## Add a Project:
 

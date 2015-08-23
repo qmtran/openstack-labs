@@ -108,4 +108,4 @@
     * push the change into github so it can be viewed on the webpage
 
 
-#### [Continue to Lab 1](../lab-01)
+#### [Continue to the next lab](../lab-01)
