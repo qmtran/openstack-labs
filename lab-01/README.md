@@ -16,7 +16,7 @@
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
-    * `sudo yum isntall -y openstack-packstack vim nano htop`
+    * `sudo yum install -y openstack-packstack vim nano htop`
 
   0. Enable root ssh access
 
@@ -55,7 +55,7 @@
   
      * `vim packstack-answers.txt` or `nano packstack-answers.txt`
      
-       Find the below configuration options and replace them with the appropriate values
+       Find these configuration options and replace them with the appropriate values
 
        ```
        # Please replace x.x.x.x below with the controller public IP
@@ -63,6 +63,7 @@
        CONFIG_KEYSTONE_ADMIN_PW=supersecret
        ```
 
+       Nova and VNC are not included by default in the answers file
        Add these configurations to the bottom of the answers file
 
        ```
@@ -76,21 +77,10 @@
        ```
 
 
-  0. `packstack --answers-file packstack-answers.txt`
+  0. `packstack --answer-file packstack-answers.txt`
 
-  0. Login to the OpenStack Horizon Web Interface by navigating your browser to the public IP address of your instance, explore the accessible pages and fill in the table of information
+  0. `sudo reboot`
 
-    ![Image of login](img/horizon-login.png)
-    
-    ![Image Dashboard](img/horizon-dashboard.png)
-
-    :red_circle: TODO items from interface
-
-    | Info to find | Value |
-    | -------------| ----- |
-    | Item 1 | |
-    | Item 2 | |
-    
 
   For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
   
