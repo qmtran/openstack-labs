@@ -37,18 +37,19 @@
 
   ** Jumper **: 
   
-    A jumper is a simple linux machine you will use as a launching point into the lab environment.  
-    We will ssh into this host in order to connect to all other instances in the lab environments.
+  A jumper is a simple linux machine you will use as a launching point into the lab environment.  
+  We will ssh into this host in order to connect to all other instances in the lab environments.
 
   ** Controller **:
    
-    :red_circle: TODO explain Controller
+  :red_circle: TODO explain Controller
 
   ** Compute **: 
 
-    :red_circle: TODO explain Compute
+  :red_circle: TODO explain Compute
 
 ## Connect to Lab Instances
+
 
   **Lab Instance Detials**
 
