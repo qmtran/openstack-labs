@@ -101,7 +101,7 @@
 
   0. `ssh centos@<Jumper Public IP> -i student.pem`
   0. `sudo yum install -y git`
-  0. `git clone https://github.com/<Your username>/openstack-labs"
+  0. `git clone https://github.com/<Your username>/openstack-labs`
 
   * :red_circle: TODO fill this out with instructions and screen shots
   0. make a change to a file
@@ -109,4 +109,4 @@
   0. push the change into github so it can be viewed on the webpage
 
 
-#### [Continue to lab-01](../lab-01)
+#### [Continue to Lab 1](../lab-01)
