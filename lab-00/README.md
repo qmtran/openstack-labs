@@ -36,36 +36,40 @@
 
   **Jumper Instance Detials**
 
-| Attribute          | Value    |
-| ------------------ | -------- |
-| size               | t2.micro |
-| OS image           | CentOS 7 x86_64 with Updates HVM |
-| Public IP address  | x.x.x.x |
-| Private IP address | y.y.y.y |
+| Attribute          | Jumper   | Controller | Compute   |
+| ------------------ | -------- | ---------- | --------- |
+| Size               | t2.micro | t2.medium  | t2.medium |
+| OS image           | CentOS 7 | CentOS 7   | CentOS 7  |
+| Public IP address  | x.x.x.x  | x.x.x.x    | x.x.x.x   |
+| Private IP address | x.x.x.x  | x.x.x.x    | x.x.x.x   |
 
-  0. Edit the Public IP address above (in your forked repo) and change 
-     x.x.x.x to be the public IP address provided by your instructor
-  0. `ssh root@<Jumper Public IP Address> -i student.pem`
-  0. `sudo yum install vim nano -y` # this host is super bare-bones
-  0. `sudo hostname jumper`
-  0. `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
+  0. Edit this README.md file and add the ip addresses to your forked repository.
+    * You can make these changes in the github webpage or from your checkedout version.
+    * Make sure your changes are committed and pushed to github.com and then refresh the page.
+
+  0. Record your instance's internal IP address in the table
+    
+     * `ssh ubuntu@<Public IP Address> -i student.pem` 
+     * `ip addr show dev eth0`
+
+  0. Set the hostname on each to help with command line differentiation
+
+    * `sudo yum install vim nano -y` # these hosts are super bare-bones
+    * `sudo hostname jumper`
+    * `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
     
     ```
     jumper
     ```
 
-  0. `exit`
-  0. `ssh root@<Jumper Public IP Address> -i student.pem`
+    * `exit`
+    * `ssh root@<Public IP Address> -i student.pem`
 
     bash should look like this now: `[centos@jumper ~]`
 
-  0. `ip addr show dev eth0`
-  0. Edit the Public IP address above (in your forked repo) and change 
-     y.y.y.y. to be the private IP address (eth0)
-
-
 ## Checkout your forked repository
 
+  0. `ssh centos@<Jumper Public IP> -i student.pem`
   0. `sudo yum install git -y`
   0. `git clone https://github.com/<Your username>/openstack-labs"
 
