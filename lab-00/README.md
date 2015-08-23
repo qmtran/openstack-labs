@@ -35,16 +35,16 @@
   This lab will utilize three hosts.  Below is a brief description of each host and 
   what it will be used for 
 
-  ** Jumper **: 
+  **Jumper**: 
   
   A jumper is a simple linux machine you will use as a launching point into the lab environment.  
   We will ssh into this host in order to connect to all other instances in the lab environments.
 
-  ** Controller **:
+  **Controller**:
    
   :red_circle: TODO explain Controller
 
-  ** Compute **: 
+  **Compute**: 
 
   :red_circle: TODO explain Compute
 
