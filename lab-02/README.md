@@ -25,6 +25,8 @@
     | Total number of Flavors            |       |             
     | Total number of OpenStack Services |       |
     | Total number of Network Agents     |       |
+    | Total number of Users              |       |
+    | Total number of Project            |       |
     | Demo Private Subnet Address Range  |       |
     | Demo Router IP address             |       |
     | Demo DHCP IP address               |       |
