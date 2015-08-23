@@ -57,19 +57,23 @@
      
        Find the below configuration options and replace them with the appropriate values
 
-         # Please replace x.x.x.x below with the controller public IP
-         CONFIG_CONTROLLER_HOST=x.x.x.x
-         CONFIG_KEYSTONE_ADMIN_PW=supersecret
+       ```
+       # Please replace x.x.x.x below with the controller public IP
+       CONFIG_CONTROLLER_HOST=x.x.x.x
+       CONFIG_KEYSTONE_ADMIN_PW=supersecret
+       ```
 
        Add these configurations to the bottom of the answers file
 
-         # Please replace x.x.x.x below with the controller public IP
-         NOVNCPROXY_URL="http://x.x.x.x:6080/vnc_auto.html"
-         NOVA_VNC_ENABLED=True
+       ```
+       # Please replace x.x.x.x below with the controller public IP
+       NOVNCPROXY_URL="http://x.x.x.x:6080/vnc_auto.html"
+       NOVA_VNC_ENABLED=True
 
-         # Please replace x.x.x.x below with the controller internal IP
-         VNCSERVER_LISTEN=x.x.x.x
-         VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+       # Please replace x.x.x.x below with the controller internal IP
+       VNCSERVER_LISTEN=x.x.x.x
+       VNCSERVER_PROXYCLIENT_ADDRESS=$VNCSERVER_LISTEN
+       ```
 
 
   0. `packstack --answers-file packstack-answers.txt`
