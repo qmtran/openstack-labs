@@ -35,6 +35,7 @@
   We will ssh into this host in order to connect to all other instances in the lab environments.
 
   *Jumper Instance Detials*
+
   | Attribute          | Value    |
   | ------------------ | -------- |
   | size               | t2.micro |
