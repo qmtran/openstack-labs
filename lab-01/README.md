@@ -11,7 +11,8 @@
 
 ## Install PackStack:
 
-:red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
+  :red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
+
   0. Install dependencies 
 
     * `sudo yum update -y`
@@ -78,14 +79,13 @@
        ```
   
      :red_circle: run this to make sure configurations got set correctly
-     `cat /etc/nova/nova.conf | grep vnc`
+     `cat /etc/nova/nova.conf | grep 'novnc\|vncserver'`
 
 
   0. `packstack --answer-file packstack-answers.txt`
 
   0. `sudo reboot`
 
-
-  For future reference see [RDO Quick Start](https://www.rdoproject.org/Quickstart)
+  Official reference documentation: [RDO Quick Start](https://www.rdoproject.org/Quickstart)
   
 #### [Next Lab](../lab-02)    
