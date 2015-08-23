@@ -36,12 +36,12 @@
 
   **Jumper Instance Detials**
 
-  | Attribute          | Value    |
-  | ------------------ | -------- |
-  | size               | t2.micro |
-  | OS image           | CentOS 7 x86_64 with Updates HVM |
-  | Public IP address  | x.x.x.x |
-  | Private IP address | y.y.y.y |
+| Attribute          | Value    |
+| ------------------ | -------- |
+| size               | t2.micro |
+| OS image           | CentOS 7 x86_64 with Updates HVM |
+| Public IP address  | x.x.x.x |
+| Private IP address | y.y.y.y |
 
   0. Edit the Public IP address above (in your forked repo) and change 
      x.x.x.x to be the public IP address provided by your instructor
