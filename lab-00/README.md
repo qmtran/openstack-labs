@@ -34,12 +34,12 @@
   A jumper is a simple linux machine you will use as a launching point into the lab environment.  
   We will ssh into this host in order to connect to all other instances in the lab environments.
 
-  *Jumper Instance Detials*
+  **Jumper Instance Detials**
 
   | Attribute          | Value    |
   | ------------------ | -------- |
   | size               | t2.micro |
-  | OS image           | CentOS 7 -x86_64- with Updates HVM |
+  | OS image           | CentOS 7 x86_64 with Updates HVM |
   | Public IP address  | x.x.x.x |
   | Private IP address | y.y.y.y |
 
