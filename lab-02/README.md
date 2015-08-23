@@ -1,4 +1,4 @@
-# Lab 2 - RDO Horizon Interface
+# Lab 2 - Horizon Interface
 
   Lab Objectives:
 

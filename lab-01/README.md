@@ -5,6 +5,7 @@
   0. Install a PackStack (RDO) controller
 
 ## Connect to your controller instance:
+
   0. `chmod 400 student.pem`
   0. `ssh centos@<Controller IP> -i student.pem`
 
