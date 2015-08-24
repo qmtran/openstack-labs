@@ -45,7 +45,10 @@
   **Jumper**: 
   
   A jumper is a simple linux machine you will use as a launching point into the lab environment.  
-  We will ssh into this host in order to connect to all other instances in the lab environments.
+  We will ssh into this host in order to connect to all other instances in the lab environments. This machine will retain
+  a copy of student.pem, which serves as an authentication key, for all of the machines you will admin.
+  
+  :red_circle: TODO include student.pem in jumper
 
   **Controller**:
    
@@ -69,18 +72,20 @@
 
   0. Your instructor will provide you three public IP addresses.  
     Edit this README.md file and add the public IP addresses for the appropriate hosts.
+
+    Alternatively (and perhaps additionally), also record all of this information on a piece of paper.
   
     :red_circle: TODO Pictures of editing a github file
 
   0. Record your instance's internal IP address in the table
     
-     * `ssh centos@<Public IP Address> -i student.pem`
+     * `ssh centos@<Public IP Address of JUMPER> -i student.pem`
        
         If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
 
      * `ip addr show dev eth0`
        
-        Record the displayed IPv4 address, not the IPv6 address. In the following example, your IPv4 address would occupy the location of x.x.x.x
+        Record the displayed IPv4 address, not the IPv6 address. When you record this address, be sure to note that it is jumper so you don't get confused. In the following example, your IPv4 address would occupy the location of x.x.x.x
         
         ```
         $ ip addr show dev eth0
@@ -93,7 +98,6 @@
           valid_lft forever preferred_lft forever
         ```
 
-
   0. Set the hostname on 'jumper' to help with command line differentiation
 
     * `sudo yum install -y vim nano`
@@ -102,11 +106,11 @@
         
     * `sudo hostname jumper`
     
-        This command sents the name of the 'jumper' machine to 'jumper', for the current session. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
+        This command sents the name of the 'jumper' machine to 'jumper', for the current session. Please use 'jumper' and not an inventive naming scheme. This helps make the troubleshooting process manageable.
 
     * `sudo /etc/hosts`
     
-        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your JUMPER machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
         
         `x.x.x.x jumper`
         
@@ -124,9 +128,62 @@
     
         The terminal session will exit. After it does, log right back in...
     
-    * `ssh centos@<Public IP Address> -i student.pem`
+    * `ssh centos@<Public IP Address of JUMPER> -i student.pem`
     
-        bash should look like this now: `[centos@jumper ~]`
+        Ofcourse, you might be using PuTTy to perform the above command. Regardless of how you start an SSH session with jumper, bash should look like this now: `[centos@jumper ~]`
+
+  0. Add controller internal IP to jumper /etc/hosts
+  
+        From the jumper box, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
+
+    * `ssh centos@<Public IP Address of CONTROLLER> -i student.pem`
+    
+    * `ip addr show dev eth0`
+    
+        Record the displayed IPv4 address, not the IPv6 address. When you record this address, be sure to note that it is CONTROLLER so you don't get confused.
+        
+    * `sudo yum install -y vim nano`
+    
+    * `sudo hostname controller`
+        
+        This command sets the name of the 'controller' to 'controller', for the current session. Please use 'controller' and not an inventive naming scheme. This helps make the troubleshooting process manageable.
+
+    * `sudo /etc/hosts`
+    
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your CONTROLLER machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
+        
+        `x.x.x.x controller`
+        
+        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+  
+    * `sudo nano /etc/hostname`
+  
+      This command edits the hostname file for the local machine. By editing this file, we are ensuring that the machine is still named 'controller' even after a reboot. Delete anything in this file (usually just one line). The only content of the file should be the single, lowercase, name of the instance as follows:
+      
+      `controller`
+      
+      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      
+    * `exit`
+    
+        You should not be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
+        
+        We want to add the INTERNAL IP address of the CONTROLLER to the /etc/hosts in JUMPER. Therefore, once again, issue the following command:
+        
+    * `sudo nano /etc/hosts`
+    
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your CONTROLLER machine. This will ensure that the JUMPER machine can resolve controller to the local IP address of the CONTROLLER.
+    
+       `x.x.x.x controller`
+    
+        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
+  
+  0. Add compute's internal IP to jumper's /etc/hosts
+
+
+
+
+
 
   0. Prevent hostname updates on reboot
 
