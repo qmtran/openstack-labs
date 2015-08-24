@@ -51,46 +51,13 @@
 
   0. Run packstack (`\` indicates newlines, not required)
 
-     ```
-     # replace x.x.x.x with the controller public ip address
-     packstack \
-       --install-hosts=x.x.x.x \
-       --keystone-admin-passwd=supersecret \
-       --provision-demo=n
-     ```
-
-  0. Edit packstack answers to tweak install configuration 
-  
-     * `vim packstack-answers.txt` or `nano packstack-answers.txt`
-     
-       Find these configuration options and replace them with the appropriate values
-
-       ```
-       # Please replace both x.x.x.x below with the controller public IP
-       CONFIG_CONTROLLER_HOST=x.x.x.x
-       CONFIG_KEYSTONE_ADMIN_PW=supersecret
-       CONFIG_PROVISION_DEMO=n
-       CONFIG_PROVISION_ALL_IN_ONE_OVS_BRIDGE=n
-       ```
-
-       These Nova and VNC are not included by default in the answers file.  
-       Add these configurations to the bottom of the answers file
-
-       ```
-       # Please replace x.x.x.x below with the controller **public** IP
-       CONFIG_NOVA_VNCPROXY_HOST=x.x.x.x
-       NOVNCPROXY_URL="http://x.x.x.x:6080/vnc_auto.html"
-       NOVA_VNC_ENABLED=True
-
-       # Please replace x.x.x.x below with the controller **internal** IP
-       VNCSERVER_LISTEN=x.x.x.x
-       VNCSERVER_PROXYCLIENT_ADDRESS=x.x.x.x
-       ```
-  
-     :red_circle: run this to make sure configurations got set correctly
-     `cat /etc/nova/nova.conf | grep 'novnc\|vncserver'`
-
-  0. `packstack --answer-file packstack-answers.txt`
+    ```
+    # replace x.x.x.x with the controller public ip address
+    packstack \
+      --install-hosts=x.x.x.x \
+      --keystone-admin-passwd=supersecret \
+      --provision-demo=n
+    ```
   
     Expected Result:
 
@@ -114,6 +81,7 @@
     * `sudo vim /etc/nova/nova.conf` or `sudo nano /etc/nova/nova.conf`
 
     ```
+    vncserver_proxyclient_address=x.x.x.x
 
     ```
 
