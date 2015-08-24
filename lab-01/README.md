@@ -23,7 +23,8 @@
 
      PackStack requires the ability to ssh as root into the target machine 
      (the machine which is getting OpenStack services are being installed to, in our case local) 
-          
+     Our target is the **Controller** instance (localhost from the perspective of PackStack) 
+     The following config changes enables key-enabled root ssh login
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
       
