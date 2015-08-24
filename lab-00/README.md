@@ -247,6 +247,8 @@
     If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
     
     * `sudo reboot`
+    
+      It may take around 180 seconds for the machine to fully powercycle.
 
 ## Log back into jumper, install git, and clone your forked repository
 
