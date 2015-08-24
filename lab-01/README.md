@@ -17,7 +17,7 @@
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
-    * `sudo yum install -y openstack-packstack vim nano htop screen`
+    * `sudo yum install -y openstack-packstack vim nano screen`
 
   0. Enable root ssh access
 
@@ -49,9 +49,15 @@
         * `ssh root@localhost` - expected success
         * `exit` - exit successful ssh session
 
-  0. Generate a PackStack Config file (answers)
+  0. Run packstack (`\` indicates newlines, not required)
 
-     * `packstack --gen-answer-file packstack-answers.txt`
+     ```
+     # replace x.x.x.x with the controller public ip address
+     packstack \
+       --install-hosts=x.x.x.x \
+       --keystone-admin-passwd=supersecret \
+       --provision-demo=n
+     ```
 
   0. Edit packstack answers to tweak install configuration 
   
@@ -84,7 +90,6 @@
      :red_circle: run this to make sure configurations got set correctly
      `cat /etc/nova/nova.conf | grep 'novnc\|vncserver'`
 
-
   0. `packstack --answer-file packstack-answers.txt`
   
     Expected Result:
@@ -102,6 +107,14 @@
      * Because of the kernel update the host x.x.x.x requires reboot.
      * The installation log file is available at: /var/tmp/packstack/20150824-002755-FL1Fzg/openstack-setup.log
      * The generated manifests are available at: /var/tmp/packstack/20150824-002755-FL1Fzg/manifests
+    ```
+
+  0. Fix the vnc proxy service
+
+    * `sudo vim /etc/nova/nova.conf` or `sudo nano /etc/nova/nova.conf`
+
+    ```
+
     ```
 
   0. `sudo reboot`

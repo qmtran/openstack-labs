@@ -1,0 +1,50 @@
+---
+- hosts: dev.controller
+  vars:
+    host_ip: "{{ ansible_default_ipv4.address }}"
+    user_priv_key: "/home/centos/.ssh/id_rsa"
+    user_pub_key: "/home/centos/.ssh/id_rsa.pub"
+  tasks:
+   - name: Record public IP
+     shell: wget -qO- http://ipecho.net/plain ; echo
+     register: public_ip
+
+   - name: Install tools
+     yum: name={{item.name}} state={{item.state}} update_cache=yes
+     sudo: yes
+     with_items:
+       - {name: git, state: latest}
+       - {name: vim, state: latest}
+       - {name: nano, state: latest}
+       - {name: screen, state: latest}
+       - {name: "https://rdoproject.org/repos/rdo-release.rpm", state: present}
+       - {name: openstack-packstack, state: latest}
+
+   - name: Allow localhost root ssh connections (RDO requirement)
+     file: src=sshd_config dest=/etc/ssh/sshd_config owner=root 
+     sudo: yes
+
+   - name: Researt SSH service
+     service: name=sshd state=restarted
+     sudo: yes
+
+   - name: ssh authorized key mgmt (1/4)
+     file: path={{item}} state=absent
+     with_items:
+      - "{{ user_priv_key }}"
+      - "{{ user_pub_key }}"
+
+   - name: ssh authorized key mgmt (2/4)
+     command: ssh-keygen -b 2048 -t rsa -f {{ user_priv_key }} -q -N ""
+
+   - name: ssh authorized key mgmt (3/4)
+     fetch: src={{ user_pub_key }} dest=controller.pub flat=yes
+     tags: this
+ 
+   - name: ssh authorized key mgmt (4/4)
+     authorized_key: 
+      user=root
+      key="{{ lookup('file', 'controller.pub') }}"
+      path='/root/.ssh/authorized_keys'
+     sudo: yes
+     tags: this
