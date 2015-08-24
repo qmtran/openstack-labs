@@ -82,7 +82,7 @@
     Adding pre install manifest entries                  [ DONE ]
     Setting up CACERT                                    [ DONE ]
 
-    ----- snip, many hundreds of seconds -----
+    ----- snip, many hundreds of seconds pass -----
 
     **** Installation completed successfully ******
 
