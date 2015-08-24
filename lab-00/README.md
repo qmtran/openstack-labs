@@ -254,8 +254,6 @@
 
   0. Log back into jumper. Of course you could use PuTTy, or if working from the CLI, issue:
     * `ssh centos@<Jumper Public IP> -i student.pem`
-
-      Of course, alternatively you could use PuTTy.
       
   0. Test that the following commands resolve and receive ping responses. If they do not, now is the time to let the instructor know. FYI, you'll need to press (CTRL + C) in order to stop pinging.
      * `ping jumper`
