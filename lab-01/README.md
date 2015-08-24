@@ -2,18 +2,20 @@
 
   Lab Objectives:
 
-  0. Install a OpenStack Controller (with RDO & PackStack)
+  0. Install a OpenStack controller (with RDO & PackStack)
 
 ## Connect to your controller instance:
 
   0. `chmod 400 student.pem`
   0. `ssh centos@<Controller IP> -i student.pem`
 
-## Install PackStack:
+## Install PackStack on controller:
 
   :red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
 
-  0. Install PackStack dependencies (your 
+  0. Install PackStack dependencies
+  
+    NOTE: bash should look like this now: `[centos@controller ~]`
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
