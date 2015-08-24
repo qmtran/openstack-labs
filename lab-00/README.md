@@ -108,13 +108,13 @@
     
         This command sents the name of the 'jumper' machine to 'jumper', for the current session. Please use 'jumper' and not an inventive naming scheme. This helps make the troubleshooting process manageable.
 
-    * `sudo /etc/hosts`
+    * `sudo nano /etc/hosts`
     
         Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your JUMPER machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
         
         `x.x.x.x jumper`
         
-        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+        After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
   
     * `sudo nano /etc/hostname`
   
@@ -122,7 +122,7 @@
       
       `jumper`
       
-      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+       After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
       
     * `exit`
     
@@ -130,11 +130,11 @@
     
     * `ssh centos@<Public IP Address of JUMPER> -i student.pem`
     
-        Ofcourse, you might be using PuTTy to perform the above command. Regardless of how you start an SSH session with jumper, bash should look like this now: `[centos@jumper ~]`
+        Of course, you might be using PuTTy to perform the above command. Regardless of how you start an SSH session with jumper, bash should look like this now: `[centos@jumper ~]`
 
   0. Add controller internal IP to jumper /etc/hosts
   
-      From the jumper box, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
+      From jumper, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
 
     * `ssh centos@<Public IP Address of CONTROLLER> -i student.pem`
     
@@ -154,7 +154,7 @@
         
         `x.x.x.x controller`
         
-        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+        After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
   
     * `sudo nano /etc/hostname`
   
@@ -162,11 +162,11 @@
       
       `controller`
       
-      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
       
     * `exit`
     
-        You should not be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
+        You should now be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
         
         We want to add the INTERNAL IP address of the CONTROLLER to the /etc/hosts in JUMPER. Therefore, once again, issue the following command:
         
@@ -176,7 +176,7 @@
     
        `x.x.x.x controller`
     
-        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
+        After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
   
   0. Add compute's internal IP to jumper's /etc/hosts
 
@@ -200,7 +200,7 @@
         
         `x.x.x.x compute`
         
-        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+        After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
   
     * `sudo nano /etc/hostname`
   
@@ -208,11 +208,11 @@
       
       `compute`
       
-      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
       
     * `exit`
     
-        You should not be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
+        You should now be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
         
         We want to add the INTERNAL IP address of the COMPUTE to the /etc/hosts in JUMPER. Therefore, once again, issue the following command:
         
@@ -222,7 +222,7 @@
     
        `x.x.x.x compute`
     
-        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
+        After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
 
   0. Prevent hostname updates on reboot
 
@@ -244,15 +244,15 @@
     # - update_hostname
     ```
     
-    If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+    If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
     
     * `sudo reboot`
 
-## Checkout your forked repository
+## Log back into jumper, install git, and clone your forked repository
 
   0. `ssh centos@<Jumper Public IP> -i student.pem`
 
-      Ofcourse, alternatively you could use PuTTy.
+      Of course, alternatively you could use PuTTy.
 
   0. `sudo yum install -y git`
   0. `git clone https://github.com/<Your username>/openstack-labs`
