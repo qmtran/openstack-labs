@@ -1,13 +1,21 @@
+# Lab 4 - Networking
 
+  Lab Objectives:
+
+  0. Demonstrate the ability to Networks and Routers from the Horizon Web Interface
+
+## Login as student
+ 
+  0. Login using the credentials created in the [previous lab](../lab-03)
 
 ## Add a Private Network
 
   0. Navigate to: Project > Network > Networks > +Create Network
 
+     :red_circle: TODO need a new screenshot showing 2 default shared networks?
      ![Create Network](img/create-network.png)
      ![Create Network](img/create-network2.png)
      ![Create Network](img/create-network3.png)
-     ![Create Network](img/create-network4.png)
 
      > :white_check_mark: **Additional Info**:
      >
@@ -15,6 +23,7 @@
      > The entry form for this field does not parse spaces.
      > Example Pool: `192.168.1.100,192.168.1.120`
 
+     ![Create Network](img/create-network4.png)
      ![Create Network](img/create-network5.png)
 
 ## Add a Router
@@ -45,3 +54,4 @@
      ![Create Router](img/create-router10.png)
      ![Create Router](img/create-router11.png)
 
+#### [Continue to the next lab](../lab-05)

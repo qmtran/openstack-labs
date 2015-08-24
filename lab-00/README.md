@@ -1,5 +1,12 @@
 # Lab 0 - Lab Environment Setup
 
+  Lab Objectives:
+
+  0. Setup your own git fork of these labs
+  0. Document Public IP and EC2 Internal IP addresses of lab instances
+  0. Checkout (clone) this repository into your Jumper instance
+
+
 ## Setup Github Lab Repository
 
   0. In a new tab, [Create a Github account](https://github.com/join) or [Login](https://github.com/login)
