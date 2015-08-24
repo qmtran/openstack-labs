@@ -94,7 +94,7 @@
         ```
 
 
-  0. Set the hostname on each to help with command line differentiation
+  0. Set the hostname on 'jumper' to help with command line differentiation
 
     * `sudo yum install -y vim nano`
     
@@ -102,12 +102,24 @@
         
     * `sudo hostname jumper`
     
-        This command sents the name of the 'jumper' machine to 'jumper'. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
+        This command sents the name of the 'jumper' machine to 'jumper', for the current session. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
+
+    * `sudo /etc/hosts'
+    
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
         
+        `x.x.x.x jumper`
+        
+        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+  
     * `sudo nano /etc/hostname`
   
-      the content of the file should be the single, lowercase, name of the instance    
-
+      This command edits the hostname file for the local machine. By editing this file, we are ensuring that the machine is still named 'jumper' even after a reboot. Delete anything in this file (usually just one line). The only content of the file should be the single, lowercase, name of the instance as follows:
+      
+      `jumper`
+      
+      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      
     * `exit`
     
         The terminal session will exit. After it does, log right back in...
@@ -118,14 +130,25 @@
 
   0. Prevent hostname updates on reboot
 
+      CentOS has the ability to detect when it is running in a cloud (such as AWS), it checks for a new hostname everytime it is launched. To ensure a predictable hostname, we'll disable this feature.
+
     * `sudo nano /etc/cloud/cloud.cfg`
 
-    Comment out these two entries uner `cloud_init_modules`:
+    Comment out these two entries under `cloud_init_modules`:
 
     ```
     - set_hostname
     - update_hostname
     ```
+    
+    When you are done editing /etc/cloud/cloud.cfg those entires should look like this:
+    
+    ```
+    # - set_hostname
+    # - update_hostname
+    ```
+    
+    If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
     
     * `sudo reboot`
 
