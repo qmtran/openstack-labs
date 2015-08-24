@@ -134,7 +134,7 @@
 
   0. Add controller internal IP to jumper /etc/hosts
   
-        From the jumper box, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
+      From the jumper box, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
 
     * `ssh centos@<Public IP Address of CONTROLLER> -i student.pem`
     
