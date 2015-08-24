@@ -57,7 +57,7 @@
         * `exit` - exit successful ssh session
 
 
-  0. Run packstack (`\` and newlines are for clarity, not required)
+  0. Run packstack (newlines and `\`'s are for clarity, not required)
 
     ```
     # replace x.x.x.x below with the Controller Internal IP address
