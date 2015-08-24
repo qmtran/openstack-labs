@@ -77,10 +77,11 @@
      * `ssh centos@<Public IP Address> -i student.pem`
      * If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
      * `ip addr show dev eth0`
-     * Record the IPv4 address, not the IPv6 address
+     * Record the IPv4 address, not the IPv6 address. In the following example, the IP address is 192.168.0.66.
         
         ```
-            2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
+        :: EXAMPLE ONLY :: OUTPUT FROM :: ip addr show dev eth0
+    2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
         link/ether 0a:6f:52:8c:f0:ef brd ff:ff:ff:ff:ff:ff
         inet 192.168.0.66/24 brd 192.168.0.255 scope global dynamic eth0
           valid_lft 2829sec preferred_lft 2829sec
