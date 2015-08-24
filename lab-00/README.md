@@ -104,7 +104,7 @@
     
         This command sents the name of the 'jumper' machine to 'jumper', for the current session. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
 
-    * `sudo /etc/hosts'
+    * `sudo /etc/hosts`
     
         Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
         
