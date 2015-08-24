@@ -250,7 +250,12 @@
     
       It may take around 180 seconds for the machine to fully powercycle.
 
-## Log back into jumper, install git, and clone your forked repository
+## Log back into jumper, test your work, install git, and clone your forked repository
+
+0. Test that the following commands resolve and receive ping backs. If they do not, now is the time to let the instructor know.
+  * `ping jumper`
+  * `ping controller`
+  * `ping compute`
 
   0. `ssh centos@<Jumper Public IP> -i student.pem`
 
