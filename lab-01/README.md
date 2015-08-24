@@ -26,15 +26,15 @@
         * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
        
           ``` 
-            ...
-            # Authentication:
+          # -- snip -- #
+          # Authentication:
 
-            #LoginGraceTime 2m
-            PermitRootLogin Yes
-            #StrictModes yes
-            #MaxAuthTries 6
-            #MaxSessions 10
-            ...
+          #LoginGraceTime 2m
+          PermitRootLogin Yes
+          #StrictModes yes
+          #MaxAuthTries 6
+          #MaxSessions 10
+          # -- snip -- #
           ```
 
         *  `sudo systemctl restart sshd.service`
@@ -56,7 +56,8 @@
     packstack \
       --install-hosts=x.x.x.x \
       --keystone-admin-passwd=supersecret \
-      --provision-demo=n
+      --provision-demo=n \
+      --use-epel=y
     ```
   
     Expected Result:
