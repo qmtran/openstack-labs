@@ -67,7 +67,7 @@
        CONFIG_PROVISION_ALL_IN_ONE_OVS_BRIDGE=n
        ```
 
-       These Nova and VNC are not included by default in the answers file
+       These Nova and VNC are not included by default in the answers file.  
        Add these configurations to the bottom of the answers file
 
        ```
@@ -87,7 +87,7 @@
 
   0. `packstack --answer-file packstack-answers.txt`
   
-    Expected Result
+    Expected Result:
 
     ```
     **** Installation completed successfully ******
