@@ -96,8 +96,14 @@
 
   0. Set the hostname on each to help with command line differentiation
 
-    * `sudo yum install -y vim nano` # these hosts are super bare-bones
+    * `sudo yum install -y vim nano`
+    
+        These hosts are super bare-bones. This command installs nano, a common text editor, used at the command line.
+        
     * `sudo hostname jumper`
+    
+        This command sents the name of the 'jumper' machine to 'jumper'. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
+        
     * `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
   
       the content of the file should be the single, lowercase, name of the instance    
