@@ -78,12 +78,14 @@
      * If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
      * `ip addr show dev eth0`
      * Record the IPv4 address, not the IPv6 address
-        '''2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
+        ```
+            2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
         link/ether 0a:6f:52:8c:f0:ef brd ff:ff:ff:ff:ff:ff
         inet 192.168.0.66/24 brd 192.168.0.255 scope global dynamic eth0
           valid_lft 2829sec preferred_lft 2829sec
         inet6 fe80::86f:52ff:fe8c:f0ef/64 scope link
-          valid_lft forever preferred_lft forever'''
+          valid_lft forever preferred_lft forever
+        ```
 
 
   0. Set the hostname on each to help with command line differentiation
