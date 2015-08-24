@@ -74,7 +74,7 @@
 
   0. Record your instance's internal IP address in the table
     
-     * `ssh ubuntu@<Public IP Address> -i student.pem` 
+     * `ssh centos@<Public IP Address> -i student.pem` 
      * `ip addr show dev eth0`
 
   0. Set the hostname on each to help with command line differentiation
@@ -86,7 +86,7 @@
       the content of the file should be the single, lowercase, name of the instance    
 
     * `exit`
-    * `ssh root@<Public IP Address> -i student.pem`
+    * `ssh centos@<Public IP Address> -i student.pem`
 
     bash should look like this now: `[centos@<hostname> ~]` where hostname is the approprate
     instance name
