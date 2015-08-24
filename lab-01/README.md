@@ -29,18 +29,18 @@
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
       
-        * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
+        * `sudo nano /etc/ssh/sshd_config`
        
           ``` 
-          # ---- snip ---- #
+          # ---- snip ---- uncomment PermitRootLogin and set to yes ---- #
           # Authentication:
 
           #LoginGraceTime 2m
-          PermitRootLogin Yes
+          PermitRootLogin yes
           #StrictModes yes
           #MaxAuthTries 6
           #MaxSessions 10
-          # -- end-snip -- #
+          # -- end-snip ------------------------------------------------ #
           ```
 
         *  `sudo systemctl restart sshd.service`
