@@ -180,7 +180,7 @@
   
   0. Add compute's internal IP to jumper's /etc/hosts
 
-        From the jumper box, issue the following command to log into compute. If prompted, respond with 'yes' to import the new key.
+    From the jumper box, issue the following command to log into compute. If prompted, respond with 'yes' to import the new key.
 
     * `ssh centos@<Public IP Address of COMPUTE> -i student.pem`
     
