@@ -19,6 +19,7 @@
  
   0. Open console, login and interact with the newly launched instance
     
+    :red_circle: TODO: haven't cracked the nut yet on RDO's VNC PROXY
     ![Instance details](img/horizon-active.png)
     ![Console tab](img/horizon-console.png)
     ![Console VNC](img/horizon-console2.png)

@@ -1,5 +1,5 @@
 ---
-- hosts: dev.controller4
+- hosts: dev.controller5
   vars:
     host_ip: "{{ ansible_default_ipv4.address }}"
     user_priv_key: "/home/centos/.ssh/id_rsa"
@@ -39,12 +39,20 @@
 
    - name: ssh authorized key mgmt (3/4)
      fetch: src={{ user_pub_key }} dest=controller.pub flat=yes
-     tags: this
  
    - name: ssh authorized key mgmt (4/4)
      authorized_key: 
-      user=root
-      key="{{ lookup('file', 'controller.pub') }}"
-      path='/root/.ssh/authorized_keys'
+      user: root
+      key: "{{ lookup('file', 'controller.pub') }}"
+      path: '/root/.ssh/authorized_keys'
      sudo: yes
+
+   - name: PackStack
+     command: packstack \
+       --allinone \
+       --install-hosts={{ host_ip }} \
+       --keystone-admin-passwd=supersecret \
+       --provision-demo=n
+     async: 1500
+     poll: 5
      tags: this
