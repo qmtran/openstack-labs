@@ -132,7 +132,7 @@
     
         Of course, you might be using PuTTy to perform the above command. Regardless of how you start an SSH session with jumper, bash should look like this now: `[centos@jumper ~]`
 
-  0. Add controller internal IP to jumper /etc/hosts
+  0. Log into controller and learn the internal IP address
   
       From jumper, issue the following command to log into the controller. If prompted, respond with 'yes' to import the new key.
 
@@ -164,6 +164,28 @@
       
       After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
       
+  0. Prevent hostname updates on reboot & add controller internal IP to jumper
+
+      CentOS has the ability to detect when it is running in a cloud (such as AWS), it checks for a new hostname everytime it is launched. To ensure a predictable hostname, we'll disable this feature.
+
+    * `sudo nano /etc/cloud/cloud.cfg`
+
+    Comment out these two entries under `cloud_init_modules`:
+
+    ```
+    - set_hostname
+    - update_hostname
+    ```
+    
+    When you are done editing /etc/cloud/cloud.cfg those entires should look like this:
+    
+    ```
+    # - set_hostname
+    # - update_hostname
+    ```
+    
+    If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      
     * `exit`
     
         You should now be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
@@ -178,7 +200,7 @@
     
         After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
   
-  0. Add compute's internal IP to jumper's /etc/hosts
+  0. Log into compute and learn the internal IP address
 
     From the jumper box, issue the following command to log into compute. If prompted, respond with 'yes' to import the new key.
 
@@ -209,6 +231,28 @@
       `compute`
       
       After you have added this file, save and exit. If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      
+  0. Prevent hostname updates on reboot & add compute internal IP to jumper
+
+      CentOS has the ability to detect when it is running in a cloud (such as AWS), it checks for a new hostname everytime it is launched. To ensure a predictable hostname, we'll disable this feature.
+
+    * `sudo nano /etc/cloud/cloud.cfg`
+
+    Comment out these two entries under `cloud_init_modules`:
+
+    ```
+    - set_hostname
+    - update_hostname
+    ```
+    
+    When you are done editing /etc/cloud/cloud.cfg those entires should look like this:
+    
+    ```
+    # - set_hostname
+    # - update_hostname
+    ```
+    
+    If this is your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
       
     * `exit`
     
