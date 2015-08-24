@@ -1,5 +1,5 @@
 ---
-- hosts: dev.controller
+- hosts: dev.controller2
   vars:
     host_ip: "{{ ansible_default_ipv4.address }}"
     user_priv_key: "/home/centos/.ssh/id_rsa"

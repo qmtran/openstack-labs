@@ -19,14 +19,18 @@
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
     * `sudo yum install -y openstack-packstack vim nano screen`
 
-  0. Enable root ssh access
+  0. Enable localhost root ssh access 
+
+     PackStack requires the ability to ssh as root into the target machine 
+     (the machine which is getting OpenStack services are being installed to, in our case local) 
+          
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
       
         * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
        
           ``` 
-          # -- snip -- #
+          # ---- snip ---- #
           # Authentication:
 
           #LoginGraceTime 2m
@@ -34,7 +38,7 @@
           #StrictModes yes
           #MaxAuthTries 6
           #MaxSessions 10
-          # -- snip -- #
+          # -- end-snip -- #
           ```
 
         *  `sudo systemctl restart sshd.service`
@@ -49,15 +53,15 @@
         * `ssh root@localhost` - expected success
         * `exit` - exit successful ssh session
 
+
   0. Run packstack (`\` and newlines are for clarity, not required)
 
     ```
-    # replace x.x.x.x below with the controller public ip address
+    # replace x.x.x.x below with the Controller Internal IP address
     packstack \
       --install-hosts=x.x.x.x \
       --keystone-admin-passwd=supersecret \
-      --provision-demo=n \
-      --use-epel=y
+      --provision-demo=n 
     ```
   
     Expected Result:
@@ -77,19 +81,39 @@
      * The generated manifests are available at: /var/tmp/packstack/20150824-002755-FL1Fzg/manifests
     ```
 
+  0. `sudo reboot`
+ 
+  0. Fix the Horizon Dashboard ServerAlias configuration
+
+    * `sudo nano /etc/httpd/conf.d/15-horizon_vhost.conf`
+
+    ```
+    # Please replace add another Server Alias like shown below and replace x.x.x.x with the Controller Public IP address
+    # ---- snip ---- #
+    ## Server aliases
+    ServerAlias 192.168.0.195
+    ServerAlias ip-192-168-0-195.ec2.internal
+    ServerAlias localhost
+    ServerAlias x.x.x.x
+    # -- end-snip -- #
+    ```
+
+    * `sudo systemctl restart httpd.service`
+
   0. Fix the nova vnc proxy service
 
     * `sudo vim /etc/nova/nova.conf` or `sudo nano /etc/nova/nova.conf`
 
     ```
     # Please replace x.x.x.x below with the Controller Public IP address
+    novncproxy_base_url=http://x.x.x.x:6080/vnc_auto.html
     vncserver_proxyclient_address=x.x.x.x
 
     ```
     * `sudo systemctl restart openstack-nova-novncproxy.service`
     * `sudo systemctl restart openstack-nova-compute.service`
 
-  0. `sudo reboot`
+  
 
   Official reference documentation: [RDO Quick Start](https://www.rdoproject.org/Quickstart)
   
