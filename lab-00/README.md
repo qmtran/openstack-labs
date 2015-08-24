@@ -80,7 +80,7 @@
 
      * `ip addr show dev eth0`
        
-        Record the IPv4 address, not the IPv6 address. In the following example, the IPv4 address occupies the location of x.x.x.x
+        Record the IPv4 address, not the IPv6 address. In the following example, your IPv4 address would occupy the location of x.x.x.x
         
         ```
         $ ip addr show dev eth0
