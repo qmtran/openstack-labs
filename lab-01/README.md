@@ -63,13 +63,9 @@
 
   0. Run packstack (newlines and `\`'s are for clarity, not required)
 
-    ```
-    # replace x.x.x.x below with the Controller Internal IP address
-    packstack \
-      --install-hosts=x.x.x.x \
-      --keystone-admin-passwd=supersecret \
-      --provision-demo=n 
-    ```
+    Replace x.x.x.x below with the Controller Internal IP address
+
+    * `packstack --install-hosts=x.x.x.x --keystone-admin-passwd=supersecret --provision-demo=n 
   
     Expected Result:
 
