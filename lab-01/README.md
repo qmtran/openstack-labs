@@ -28,11 +28,13 @@
      the centos user to ssh in as root using their private key. 
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
+     
+          Edit the sshd_config file by removing the comment on PermitRootLogin and set it to yes.
       
         * `sudo nano /etc/ssh/sshd_config`
        
           ``` 
-          # ---- snip ---- uncomment PermitRootLogin and set to yes ---- #
+          # --- snip --- #
           # Authentication:
 
           #LoginGraceTime 2m
@@ -40,7 +42,7 @@
           #StrictModes yes
           #MaxAuthTries 6
           #MaxSessions 10
-          # -- end-snip ------------------------------------------------ #
+          # --- end-snip --- #
           ```
 
         *  `sudo systemctl restart sshd.service`
