@@ -13,16 +13,16 @@
 
   :red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
 
-  0. Install dependencies 
+  0. Install PackStack dependencies 
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
     * `sudo yum install -y openstack-packstack vim nano screen`
 
-  0. Enable localhost root ssh access 
+  0. Enable root ssh access 
 
      PackStack requires the ability to ssh as root into the target machine 
-     (the machine which is getting OpenStack services are being installed to, in our case local) 
+     (the machine which is getting OpenStack services are being installed to, in our case localhost) 
      Our target is the **Controller** instance (localhost from the perspective of PackStack) 
      The following config changes enables key-enabled root ssh login
 
@@ -114,7 +114,6 @@
     * `sudo systemctl restart openstack-nova-novncproxy.service`
     * `sudo systemctl restart openstack-nova-compute.service`
 
-  
 
   Official reference documentation: [RDO Quick Start](https://www.rdoproject.org/Quickstart)
   
