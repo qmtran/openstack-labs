@@ -45,6 +45,7 @@
         *  `sudo systemctl restart sshd.service`
 
      0. Setup root private key login
+
         * `ssh root@localhost` - expected failure
         * `sudo cat /root/.ssh/authorized_keys` - the keys currently allowed
         * `ssh-keygen` - accept defaults
