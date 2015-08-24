@@ -2,18 +2,20 @@
 
   Lab Objectives:
 
-  0. Install a OpenStack Controller (with RDO & PackStack)
+  0. Install a OpenStack controller (with RDO & PackStack)
 
 ## Connect to your controller instance:
 
   0. `chmod 400 student.pem`
   0. `ssh centos@<Controller IP> -i student.pem`
 
-## Install PackStack:
+## Install PackStack on controller:
 
   :red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
 
-  0. Install PackStack dependencies 
+  0. Install PackStack dependencies
+  
+    NOTE: bash should look like this now: `[centos@controller ~]`
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
@@ -28,19 +30,21 @@
      the centos user to ssh in as root using their private key. 
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
+     
+          Edit the sshd_config file by removing the comment on PermitRootLogin and set it to yes.
       
-        * `sudo vim /etc/ssh/sshd_config` or `sudo nano /etc/ssh/sshd_config`
+        * `sudo nano /etc/ssh/sshd_config`
        
           ``` 
-          # ---- snip ---- #
+          # --- snip --- #
           # Authentication:
 
           #LoginGraceTime 2m
-          PermitRootLogin Yes
+          PermitRootLogin yes
           #StrictModes yes
           #MaxAuthTries 6
           #MaxSessions 10
-          # -- end-snip -- #
+          # --- end-snip --- #
           ```
 
         *  `sudo systemctl restart sshd.service`
@@ -50,7 +54,7 @@
         * `ssh root@localhost` - expected failure
         * `sudo cat /root/.ssh/authorized_keys` - the keys currently allowed
         * `ssh-keygen` - accept defaults
-        * `cat /home/centos/.ssh/id_rsa.pub` - the controller's public key (if absent generate with `ssh-keygen`)
+        * `cat /home/centos/.ssh/id_rsa.pub` - the user's public key
         * `cat /home/centos/.ssh/id_rsa.pub | sudo tee -a /root/.ssh/authorized_keys` - append controllers key
         * `sudo cat /root/.ssh/authorized_keys` - one more key should be there
         * `ssh root@localhost` - expected success
