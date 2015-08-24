@@ -78,6 +78,7 @@
      * If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
      * `ip addr show dev eth0`
      * Record the IPv4 address, not the IPv6 address
+        
         ```
             2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
         link/ether 0a:6f:52:8c:f0:ef brd ff:ff:ff:ff:ff:ff
