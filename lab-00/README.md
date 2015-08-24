@@ -98,25 +98,27 @@
 
     * `sudo yum install -y vim nano`
     
-        These hosts are super bare-bones. This command installs nano, a common text editor, used at the command line.
+        These hosts are super bare-bones. This command installs nano, a common (user friendly) CLI text editor. You can use vi or vim, however, all lab instructions will be given assuming the use of nano.
         
     * `sudo hostname jumper`
     
         This command sents the name of the 'jumper' machine to 'jumper'. Please use 'jumper' and not an inventive naming scheme. This helps making the troubleshooting process manageable.
         
-    * `sudo vi /etc/hostname` or `sudo nano /etc/hostname`
+    * `sudo nano /etc/hostname`
   
       the content of the file should be the single, lowercase, name of the instance    
 
     * `exit`
+    
+        The terminal session will exit. After it does, log right back in...
+    
     * `ssh centos@<Public IP Address> -i student.pem`
-
-    bash should look like this now: `[centos@<hostname> ~]` where hostname is the approprate
-    instance name
+    
+        bash should look like this now: `[centos@jumper ~]`
 
   0. Prevent hostname updates on reboot
 
-    * `sudo vim /etc/cloud/cloud.cfg`
+    * `sudo nano /etc/cloud/cloud.cfg`
 
     Comment out these two entries uner `cloud_init_modules`:
 
