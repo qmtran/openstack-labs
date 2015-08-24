@@ -75,9 +75,9 @@
   0. Record your instance's internal IP address in the table
     
      * `ssh centos@<Public IP Address> -i student.pem`
-      * If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
+       * If using PuTTy, login as 'centos' and use the student.ppk keyfile (takes place of a password)
      * `ip addr show dev eth0`
-      * Record the IPv4 address, not the IPv6 address. In the following example, the IP address is 192.168.0.66.
+       * Record the IPv4 address, not the IPv6 address. In the following example, the IP address is 192.168.0.66.
         
         ```
         :: EXAMPLE ONLY :: OUTPUT FROM :: ip addr show dev eth0
