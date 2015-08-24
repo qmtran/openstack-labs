@@ -60,7 +60,6 @@
         * `ssh root@localhost` - expected success
         * `exit` - exit successful ssh session
 
-
   0. Run packstack (newlines and `\`'s are for clarity, not required)
 
     Replace x.x.x.x below with the Controller Internal IP address
@@ -70,6 +69,21 @@
     Expected Result:
 
     ```
+    Welcome to the Packstack setup utility
+
+    The installation log file is available at: /var/tmp/packstack/20150824-185121-1WICWt/openstack-setup.log
+
+    Installing:
+    Clean Up                                             [ DONE ]
+    Discovering ip protocol version                      [ DONE ]
+    Setting up ssh keys                                  [ DONE ]
+    Preparing servers                                    [ DONE ]
+    Pre installing Puppet and discovering hosts' details [ DONE ]
+    Adding pre install manifest entries                  [ DONE ]
+    Setting up CACERT                                    [ DONE ]
+
+    ----- snip, many hundreds of seconds -----
+
     **** Installation completed successfully ******
 
     Additional information:
@@ -83,6 +97,7 @@
      * The installation log file is available at: /var/tmp/packstack/20150824-002755-FL1Fzg/openstack-setup.log
      * The generated manifests are available at: /var/tmp/packstack/20150824-002755-FL1Fzg/manifests
     ```
+
 
   0. `sudo reboot`
  
