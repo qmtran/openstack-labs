@@ -49,11 +49,11 @@
         * `ssh root@localhost` - expected success
         * `exit` - exit successful ssh session
 
-  0. Run packstack (`\` indicates newlines, not required)
+  0. Run packstack (`\` and newlines are for clarity, not required)
 
     ```
     # replace x.x.x.x with the controller public ip address
-    packstack \
+     packstack \
       --install-hosts=x.x.x.x \
       --keystone-admin-passwd=supersecret \
       --provision-demo=n
