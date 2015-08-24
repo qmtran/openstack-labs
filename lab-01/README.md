@@ -98,8 +98,9 @@
      * The generated manifests are available at: /var/tmp/packstack/20150824-002755-FL1Fzg/manifests
     ```
 
-
   0. `sudo reboot`
+  0. `ping <Controller IP>` - Wait for it to fail and then come back
+  0. `ssh centos@<Controller IP> -i student.pem`
  
   0. Fix the Horizon Dashboard ServerAlias configuration
 
