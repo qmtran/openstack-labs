@@ -76,14 +76,17 @@
      * The generated manifests are available at: /var/tmp/packstack/20150824-002755-FL1Fzg/manifests
     ```
 
-  0. Fix the vnc proxy service
+  0. Fix the nova vnc proxy service
 
     * `sudo vim /etc/nova/nova.conf` or `sudo nano /etc/nova/nova.conf`
 
     ```
+    # Please replace x.x.x.x with the Controller Public IP address
     vncserver_proxyclient_address=x.x.x.x
 
     ```
+    * `sudo systemctl restart openstack-nova-novncproxy.service`
+    * `sudo systemctl restart openstack-nova-compute.service`
 
   0. `sudo reboot`
 
