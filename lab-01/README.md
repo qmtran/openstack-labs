@@ -21,10 +21,11 @@
 
   0. Enable root ssh access 
 
-     PackStack requires the ability to ssh as root into the target machine 
-     (the machine which is getting OpenStack services are being installed to, in our case localhost) 
-     Our target is the **Controller** instance (localhost from the perspective of PackStack) 
-     The following config changes enables key-enabled root ssh login
+     `packstack` requires the ability to ssh as root into the target machine 
+     (the machine which is getting OpenStack services are being installed to, 
+     in our case the controller instance).  The following config changes enables
+     key-enabled root ssh login to our controller and setup authorized keys to allow
+     the centos user to ssh in as root using their private key. 
 
      0. Alter SSH Daemon config to permit root login and restart it to take effect
       
@@ -44,7 +45,7 @@
 
         *  `sudo systemctl restart sshd.service`
 
-     0. Setup root private key login
+     0. Setup root private key login and appropriate keys
 
         * `ssh root@localhost` - expected failure
         * `sudo cat /root/.ssh/authorized_keys` - the keys currently allowed
