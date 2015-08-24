@@ -80,14 +80,14 @@
 
      * `ip addr show dev eth0`
        
-        Record the IPv4 address, not the IPv6 address. In the following example, the IP address is 192.168.0.66
+        Record the IPv4 address, not the IPv6 address. In the following example, the IPv4 address occupies the location of x.x.x.x
         
         ```
-        $ip addr show dev eth0
+        $ ip addr show dev eth0
         
     2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
         link/ether 0a:6f:52:8c:f0:ef brd ff:ff:ff:ff:ff:ff
-        inet 192.168.0.66/24 brd 192.168.0.255 scope global dynamic eth0
+        inet x.x.x.x/24 brd 192.168.0.255 scope global dynamic eth0
           valid_lft 2829sec preferred_lft 2829sec
         inet6 fe80::86f:52ff:fe8c:f0ef/64 scope link
           valid_lft forever preferred_lft forever
