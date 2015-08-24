@@ -180,10 +180,49 @@
   
   0. Add compute's internal IP to jumper's /etc/hosts
 
+        From the jumper box, issue the following command to log into compute. If prompted, respond with 'yes' to import the new key.
 
+    * `ssh centos@<Public IP Address of COMPUTE> -i student.pem`
+    
+    * `ip addr show dev eth0`
+    
+        Record the displayed IPv4 address, not the IPv6 address. When you record this address, be sure to note that it is COMPUTE so you don't get confused.
+        
+    * `sudo yum install -y vim nano`
+    
+    * `sudo hostname compute`
+        
+        This command sets the name of the 'compute' to 'compute', for the current session. Please use 'compute' and not an inventive naming scheme. This helps make the troubleshooting process manageable.
 
-
-
+    * `sudo /etc/hosts`
+    
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your COMPUTE machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
+        
+        `x.x.x.x compute`
+        
+        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+  
+    * `sudo nano /etc/hostname`
+  
+      This command edits the hostname file for the local machine. By editing this file, we are ensuring that the machine is still named 'compute' even after a reboot. Delete anything in this file (usually just one line). The only content of the file should be the single, lowercase, name of the instance as follows:
+      
+      `compute`
+      
+      After you have edited this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)
+      
+    * `exit`
+    
+        You should not be back at your jumper machine (bash should look like this now: `[centos@jumper~]`
+        
+        We want to add the INTERNAL IP address of the COMPUTE to the /etc/hosts in JUMPER. Therefore, once again, issue the following command:
+        
+    * `sudo nano /etc/hosts`
+    
+        Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your COMPUTE machine. This will ensure that the JUMPER machine can resolve controller to the local IP address of the COMPUTE.
+    
+       `x.x.x.x compute`
+    
+        After you have added this file, save and exit. If your this your first time working with nano, press (CTRL + o), press ENTER, then press (CTRL + x)        
 
   0. Prevent hostname updates on reboot
 
