@@ -148,7 +148,7 @@
         
         This command sets the name of the 'controller' to 'controller', for the current session. Please use 'controller' and not an inventive naming scheme. This helps make the troubleshooting process manageable.
 
-    * `sudo /etc/hosts`
+    * `sudo nano /etc/hosts`
     
         Add a single line to the bottom of /etc/hosts where x.x.x.x is the internal eth0 IPv4 address of your CONTROLLER machine (you just recorded this). This will ensure that the machine can resolve its own local hostname to an IP address.
         
