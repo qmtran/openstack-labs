@@ -13,7 +13,7 @@
 
   :red_circle: TODO: brief paragraph about packstack (i.e. that it is puppet based)
 
-  0. Install PackStack dependencies 
+  0. Install PackStack dependencies (your 
 
     * `sudo yum update -y`
     * `sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm`
@@ -52,7 +52,7 @@
         * `ssh root@localhost` - expected failure
         * `sudo cat /root/.ssh/authorized_keys` - the keys currently allowed
         * `ssh-keygen` - accept defaults
-        * `cat /home/centos/.ssh/id_rsa.pub` - the controller's public key (if absent generate with `ssh-keygen`)
+        * `cat /home/centos/.ssh/id_rsa.pub` - the user's public key
         * `cat /home/centos/.ssh/id_rsa.pub | sudo tee -a /root/.ssh/authorized_keys` - append controllers key
         * `sudo cat /root/.ssh/authorized_keys` - one more key should be there
         * `ssh root@localhost` - expected success
