@@ -251,6 +251,9 @@
 ## Checkout your forked repository
 
   0. `ssh centos@<Jumper Public IP> -i student.pem`
+
+      Ofcourse, alternatively you could use PuTTy.
+
   0. `sudo yum install -y git`
   0. `git clone https://github.com/<Your username>/openstack-labs`
   0. :red_circle: TODO fill this out with instructions and screen shots
