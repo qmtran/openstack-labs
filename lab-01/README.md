@@ -52,8 +52,8 @@
   0. Run packstack (`\` and newlines are for clarity, not required)
 
     ```
-    # replace x.x.x.x with the controller public ip address
-     packstack \
+    # replace x.x.x.x below with the controller public ip address
+    packstack \
       --install-hosts=x.x.x.x \
       --keystone-admin-passwd=supersecret \
       --provision-demo=n
@@ -81,7 +81,7 @@
     * `sudo vim /etc/nova/nova.conf` or `sudo nano /etc/nova/nova.conf`
 
     ```
-    # Please replace x.x.x.x with the Controller Public IP address
+    # Please replace x.x.x.x below with the Controller Public IP address
     vncserver_proxyclient_address=x.x.x.x
 
     ```
