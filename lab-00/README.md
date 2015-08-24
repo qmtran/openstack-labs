@@ -252,17 +252,20 @@
 
 ## Log back into jumper, test your work, install git, and clone your forked repository
 
-0. Test that the following commands resolve and receive ping backs. If they do not, now is the time to let the instructor know.
+  0. Log back into jumper. Of course you could use PuTTy, or if working from the CLI, issue:
+    * `ssh centos@<Jumper Public IP> -i student.pem`
+
+      Of course, alternatively you could use PuTTy.
+      
+  0. Test that the following commands resolve and receive ping responses. If they do not, now is the time to let the instructor know. FYI, you'll need to press (CTRL + C) in order to stop pinging.
   * `ping jumper`
   * `ping controller`
   * `ping compute`
 
-  0. `ssh centos@<Jumper Public IP> -i student.pem`
-
-      Of course, alternatively you could use PuTTy.
-
-  0. `sudo yum install -y git`
-  0. `git clone https://github.com/<Your username>/openstack-labs`
+  0. Install git to the linux CLI. This is a standarded utility you will NEED to understand if you wish to work with OpenStack, as git is the service that distrubutes the OpenStack project. In order to force git comprehension, we will also use git to distribute our lab manual.
+  * `sudo yum install -y git`
+  0. Now clone the Alta3 Reserach OpenStack lab manual
+  * `git clone https://github.com/<Your username>/openstack-labs`
   0. :red_circle: TODO fill this out with instructions and screen shots
     * make a change to a file
     * commit the change
