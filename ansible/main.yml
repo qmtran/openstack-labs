@@ -1,0 +1,35 @@
+---
+- hosts: controller
+  remote_user: root
+  tasks: 
+  - name: Record public IP
+    shell: curl http://ipecho.net/plain;
+    register: public_ip
+
+  - name: Deploy Nova Compute Template  
+    template: src=files/nova-controller.conf.j2 dest=/etc/nova/nova.conf
+
+- hosts: 
+  - compute1
+  - compute2
+  remote_user: root 
+  vars:
+    controller_public_ip: "{{ hostvars['controller'].public_ip.stdout }}"
+    compute_ip: "{{ ansible_default_ipv4.address }}"
+  tasks: 
+
+  - name: Deploy Nova Compute Template  
+    template: src=files/nova-compute.conf.j2 dest=/etc/nova/nova.conf
+
+  - name: Restart Nova Compute Service
+    service: name={{ item }} state=restarted
+    with_items: 
+    - openstack-nova-compute
+
+- hosts: controller
+  remote_user: root
+  tasks: 
+  - name: Restart Nova Compute and VNC Proxy Service
+    service: name={{ item }} state=restarted
+    with_items: 
+    - openstack-nova-novncproxy
