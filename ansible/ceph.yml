@@ -1,0 +1,53 @@
+---
+# Based on http://docs.ceph.com/docs/master/start/quick-start-preflight/
+- hosts:
+  - controller
+  remote_user: centos
+  tasks:
+  - name: Generate SSH key (centos on controller)
+    user: name=centos generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
+  - name: Collect SSH public key (centos on controller)
+    fetch: src=/home/centos/.ssh/id_rsa.pub dest=/tmp/controller_id_rsa.pub flat=yes
+
+- hosts:
+  - storage2
+  - storage1
+  remote_user: root 
+  vars:
+    ceph_release: hammer
+    distro: el7  
+  tasks: 
+
+  - name: Bootstrap Ceph Repo
+    template: src=files/ceph.repo.j2
+              dest=/etc/yum.repos.d/ceph.repo
+              owner=root group=root mode=0644
+
+  - name: Ceph Dependencies and ceph-deploy
+    yum: name={{ item }} state=latest
+         enablerepo=ceph-noarch
+         update_cache=yes
+    with_items: 
+    - vim
+    - nano
+    - ntp 
+    - ntpdate
+    - ntp-doc
+    - ceph-deploy
+
+  - name: Make wheel group passwordless sudoers
+    lineinfile: "dest=/etc/sudoers state=present regexp='^%wheel' line='%wheel ALL=(ALL) NOPASSWD: ALL' validate='visudo -cf %s'"
+
+  - name: Add ceph user
+    user: name=ceph groups=wheel append=yes
+
+  - name: Add authorized key
+    authorized_key: 
+      user=ceph 
+      key="{{ lookup('file', '/tmp/controller_id_rsa.pub') }}"
+
+  - name: Disable SELinux
+    selinux: state=disabled
+
+
+
