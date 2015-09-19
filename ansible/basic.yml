@@ -1,0 +1,62 @@
+---
+- hosts:
+  - controller
+  remote_user: centos
+  tasks:
+  - name: Generate SSH key (centos on controller)
+    user: name=centos generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
+  - name: Collect SSH public key (centos on controller)
+    fetch: src=/home/centos/.ssh/id_rsa.pub dest=/tmp/controller_id_rsa.pub flat=yes
+  - name: Collect SSH private key (centos on controller)
+    fetch: src=/home/centos/.ssh/id_rsa dest=/tmp/controller_id_rsa flat=yes
+
+- hosts: openstack-lab
+  remote_user: root
+  tasks: 
+  - name: Setup /etc/hosts
+    copy: src=files/hosts dest=/etc/hosts
+
+  - name: Place ssh config file
+    copy: src=files/ssh_config
+          dest={{ item.home }}/.ssh/config
+          owner={{ item.user }}
+          group={{ item.user }}
+    with_items:
+    - { home: '/root', user: 'root' }
+    - { home: '/home/centos', user: 'centos' }
+    - { home: '/home/ceph', user: 'ceph' }
+    ignore_errors: yes
+
+  - name: Place ssh key 
+    copy: src=/tmp/controller_id_rsa 
+          dest={{ item.home }}/.ssh/id_rsa
+          owner={{ item.user }}
+          group={{ item.user }}
+          mode=0400
+    with_items:
+    - { home: '/root', user: 'root' }
+    - { home: '/home/centos', user: 'centos' }
+    - { home: '/home/ceph', user: 'ceph' }
+    ignore_errors: yes
+
+  - name: Add authorized key
+    authorized_key: 
+      user: "{{ item }}" 
+      key: "{{ lookup('file', '/tmp/controller_id_rsa.pub') }}"
+    with_items:
+    - ceph
+    - centos
+    - root
+    ignore_errors: yes
+
+  - name: tools
+    yum: name={{ item }} state=latest
+         update_cache=yes
+    with_items: 
+    - vim
+    - nano
+    - htop
+    - screen
+    - git
+    - ansible
+    - yum-plugin-priorities
