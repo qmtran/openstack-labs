@@ -1,0 +1,21 @@
+Host neutron
+   Hostname neutron
+   User centos
+Host controller
+   Hostname controller
+   User centos
+Host compute1
+   Hostname compute1
+   User centos
+Host compute2
+   Hostname compute2
+   User centos
+Host storage1
+   Hostname storage1
+   User ceph
+Host storage2
+   Hostname storage2
+   User ceph
+Host storage3
+   Hostname storage3
+   User ceph

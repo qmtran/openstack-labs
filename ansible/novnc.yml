@@ -9,6 +9,17 @@
   - name: Deploy Nova Compute Template  
     template: src=files/nova-controller.conf.j2 dest=/etc/nova/nova.conf
 
+  - name: Deploy Horizon Vhost
+    copy: src=files/vhost.conf
+        dest=/etc/httpd/conf.d/15-horizon_vhost.conf
+
+  - name: Deploy Horizon Vhost
+    copy: src=files/ssl_vhost.conf
+        dest=/etc/httpd/conf.d/15-horizon_ssl_vhost.conf
+
+  - name: Restart httpd
+    service: name=httpd state=restarted
+
 - hosts: 
   - compute1
   - compute2
