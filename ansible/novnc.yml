@@ -1,6 +1,7 @@
 ---
 - hosts: controller
   remote_user: root
+  vars: 
   tasks: 
   - name: Record public IP
     shell: curl http://ipecho.net/plain;
@@ -8,14 +9,6 @@
 
   - name: Deploy Nova Compute Template  
     template: src=files/nova-controller.conf.j2 dest=/etc/nova/nova.conf
-
-  - name: Deploy Horizon Vhost
-    copy: src=files/vhost.conf
-        dest=/etc/httpd/conf.d/15-horizon_vhost.conf
-
-  - name: Deploy Horizon Vhost
-    copy: src=files/ssl_vhost.conf
-        dest=/etc/httpd/conf.d/15-horizon_ssl_vhost.conf
 
   - name: Restart httpd
     service: name=httpd state=restarted
@@ -28,6 +21,7 @@
     controller_public_ip: "{{ hostvars['controller'].public_ip.stdout }}"
     compute_ip: "{{ ansible_default_ipv4.address }}"
   tasks: 
+
 
   - name: Deploy Nova Compute Template  
     template: src=files/nova-compute.conf.j2 dest=/etc/nova/nova.conf

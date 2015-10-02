@@ -5,10 +5,24 @@
   tasks:
   - name: Generate SSH key (centos on controller)
     user: name=centos generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
+
   - name: Collect SSH public key (centos on controller)
     fetch: src=/home/centos/.ssh/id_rsa.pub dest=/tmp/controller_id_rsa.pub flat=yes
+    
   - name: Collect SSH private key (centos on controller)
     fetch: src=/home/centos/.ssh/id_rsa dest=/tmp/controller_id_rsa flat=yes
+
+  - name: Record public IP
+    shell: curl http://ipecho.net/plain;
+    register: public_ip
+
+  - name: Deploy Horizon Vhost
+    copy: src=files/vhost.conf
+        dest=/etc/httpd/conf.d/15-horizon_vhost.conf
+
+  - name: Deploy Horizon Vhost
+    copy: src=files/ssl_vhost.conf
+        dest=/etc/httpd/conf.d/15-horizon_ssl_vhost.conf
 
 - hosts: openstack-lab
   remote_user: root
