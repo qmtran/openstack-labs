@@ -1,7 +1,7 @@
 +++
 date = "2015-09-30"
 draft = false
-weight = 100
+weight = 16
 title = "Glossary"
 +++
 
