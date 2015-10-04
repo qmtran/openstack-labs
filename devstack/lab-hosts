@@ -1,3 +1,0 @@
-[devstack]
-dev.controller ansible_ssh_host=52.20.62.42 ansible_ssh_private_key_file=~/openstack-labs/student.pem ansible_ssh_user=ubuntu
-dev.compute ansible_ssh_host=52.0.202.229 ansible_ssh_private_key_file=~/openstack-labs/student.pem ansible_ssh_user=ubuntu
