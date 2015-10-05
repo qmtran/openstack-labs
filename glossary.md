@@ -13,12 +13,12 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Active Passive Configuration** [19] In a high-availability setup with an active/passive configuration, systems are set up to bring additional resources online to replace those that have failed.
 - **Address Pool** [7] A list of the fixed and/or floating IP addresses that are allocated/assigned to a project (tenant) to be used or assigned to the VM instances in a project.
 - **API** [1] Application Programming Interface. A collection of specifications used to access a service, application, or program. Includes service calls, required parameters for each call, and the expected return values.
-- **API Endpoint** [1] The daemon, worker, or service that a client communicates with to access an API. API endpoints can provide any number of services such as authentication, accounting information, performance metrics, compute (nova) VM instance commands, population density of European & African Swallows… anything!
+- **API Endpoint** [1] The daemon, worker, or service that a client communicates with to access an API. API endpoints can provide any number of services such as authentication, accounting information, performance metrics, compute (nova) VM instance commands, population density of European & African Swallows anything!
 - **API Key** [5] A term sometimes used to describe an API token.
 - **API Token** [5] Passed on API requests and used by OpenStack services to verify that this particular user is authorized to access and run the requested operation.
 - **API Version** [5] The API version can be found as part of the URL.
 - **Austin** [1] The first release of OpenStack was called Austin. Unsurprisingly, the first design summit took place in this capital city of Texas. OpenStack versions are short lived, and the release dates are aggressive (about 2 new releases a year). Generally, a customer will fork an OpenStack release version, and stick with it.
-- **Authentication Token** [5] The identity service (Keystone) first confirms the identity of a user, process, or client; authorized because they’ve provided a private key, token, password, fingerprint, or similar security mechanism. The authentication token is a string of text returned to the user that is then included with a subsequent API request.
+- **Authentication Token** [5] The identity service (Keystone) first confirms the identity of a user, process, or client; authorized because they've provided a private key, token, password, fingerprint, or similar security mechanism. The authentication token is a string of text returned to the user that is then included with a subsequent API request.
 - **Back End** [1] Any processes that are obfuscated from the user. Think daemons waiting in the background waiting for requests, or carrying out tasks in response to messages in a queue; an example might be the creation and deletion of volumes on storage arrays, or passing tokens with API calls.
 - **Bare** [17] A repository without a clear working directory, therefore, cannot be used for development work just maintain commits. The central repository is typically a bare repository. 
 - **Bare Metal Service** [1] OpenStack project that provisions bare metal, as opposed to virtual, machines. The code name for the project is ironic.
@@ -28,7 +28,7 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Cache Pruner** [10] Image cache has a configurable maximum size. If glance-cache-pruner is running, and the image_cache_max_size is exceeded, it will start running and try to remove images in a stalled or invalid state due to image cache writing failing to complete, or not being written properly. It is recommended that cron is used to fire off glance-cache-pruner at a regular interval.
 - **Ceilometer** [14] The project name for the Telemetry service, which is an integrated project that provides metering and measuring facilities for OpenStack.
 - **Ceph** [12] The OpenStack storage system of choice because it is massively scalable, and therefore well suited for big data. Ceph uses a distributed storage system that consists of an object and block store, as well as a POSIX-compatible distributed file system.
-- **ceph mds** [12] (ceph-mds) The metadata server daemon for the Ceph distributed file system. One or more instances of ceph-mds collectively manage the file system namespace, coordinating access to the shared OSD cluster. Each ceph-mds daemon instance should have a unique name. The name is used to identify daemon instances in the ceph.conf.
+- **ceph mds** [12] *ceph-mds* The metadata server daemon for the Ceph distributed file system. One or more instances of ceph-mds collectively manage the file system namespace, coordinating access to the shared OSD cluster. Each ceph-mds daemon instance should have a unique name. The name is used to identify daemon instances in the ceph.conf.
 - **Chance Scheduler** [6] A random scheduling method used by Compute (nova) to choose an available host from the pool of hosts.
 - **Chef** [18] OS configuration management tool supporting OpenStack deployments.
 - **Cinder** [13] An OpenStack service that provides block storage for VM instances.
@@ -48,30 +48,30 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Customer** [5] Synonymous with tenant or project.
 - **Customization Module** [2] A custom made Python module loaded into Horizon to change the dashboard layout. Inclusive of visual-only, and functionality changes enhancements.
 - **Customization Module** [2] User created modules loaded into horizon to skin the dashboard differently.
-- **DaaS** [1] (Desktop as a Service) Another example of a possible cloud service offering. Customers have a choice of desktop environments that users access to receive a desktop experience from any location. Could be an everyday use, or testing.
+- **DaaS** [1] *Desktop as a Service* Another example of a possible cloud service offering. Customers have a choice of desktop environments that users access to receive a desktop experience from any location. Could be an everyday use, or testing.
 - **Daemon** [1] Processes that run in the background and wait for requests. Commonly examples include glance-api, keystone-server, neutron-server, nova-api, nova-scheduler, and so on.
 - **Dashboard** [2] Another name for Horizon, the Web Graphical User Interface (or Browser User Interface) that can be used to control OpenStack. Advanced OpenStack users will not spend much time within Horizon.
 - **Database Service** [16] An integrated project that provide scalable and reliable Cloud Database-as-a-Service functionality for both relational and non-relational database engines. The project name of Database service is trove.
-- **Default Tenant** [5] If a new user gets created and no tenant is specified at the time of creation, they will be assigned a ‘default tenant’ (remember, tenants are projects).
+- **Default Tenant** [5] If a new user gets created and no tenant is specified at the time of creation, they will be assigned a 'default tenant' (remember, tenants are projects).
 - **Depreciated** [1] This mechanism has lost favor and may be removed from future version. An example is using the option within Compute that allows an admin to create and manage users through the nova-manage command as opposed to using the Identity service (Keystone).
 - **DevStack** [1] Great for testing and (relatively) quick to install. Community project that uses shell scripts to quickly build complete OpenStack development environments. Runs well in Debian (Ubuntu) systems
-- **Distributed Virtual Router** [7] (DVR) Highly-available multi-host routing using OpenStack Networking (neutron).
+- **Distributed Virtual Router** [7] *DVR* Highly-available multi-host routing using OpenStack Networking (neutron).
 - **Domain** [7] Domain can refer to an Identity API v3 entity where it would reference a collection of projects, groups and users that defines administrative boundaries for managing OpenStack Identity entities. When talking about the internet, it is the name space that is to the left of the TLD (.com, .gov., .edu, and so on) that must be unique.
 - **Ephemeral Volume** [12] A VM instance that does not save changes made to its volumes, therefore, it will return to the original state when the user relinquishes control (i.e. terminated).
 - **ESXi** [4] One of the hypervisors supported by OpenStack
 - **Evacuate** [3] The process of migrating one or all virtual machine (VM) instances from one host to another, compatible with both shared storage live migration and block migration.
 - **External Network** [7] Usually the network that a VM instance will use to access the internet.
 - **Fan Out Exchange** [15] Within RabbitMQ and Compute, it is the messaging interface that is used by the scheduler service to receive capability messages from the compute, volume, and network nodes.
-- **Fibre Channel** [13] (FC) A network technology commonly running at 2, 4, 8, and 16 Gbps primarily used to connect computers to data storage. Developed during the Jurassic period of computing, millions of web years ago (1988)
+- **Fibre Channel** [13] *FC* A network technology commonly running at 2, 4, 8, and 16 Gbps primarily used to connect computers to data storage. Developed during the Jurassic period of computing, millions of web years ago (1988)
 - **Fill First Scheduler** [6] A Computer (nova) scheduling method to fill up a host with VM instances, as opposed to distributing those VM instances across many hosts.
 - **Fixed IP Address** [7] Also known as a static IP address. To be ssociated with the same instance every time that instance boots. Used for managing that instance, and not typically accessible from the public-web.
 - **Flat Manager** [7] The Compute component that gives IP address to authorized nodes and assumes DHCP, DNS, and routing configuration are provided elsewhere (such as by the FlatDHCP manager).
 - **Flat Mode Injection** [7] A compute networking method where the OS network configuration information is injected into the image before the VM instance is started.
 - **FlatDHCP Manager** [7] The compute component that gives dnsmasq (DHCP, DNS, BOOTP, TFTP) and routing services.
-- **Flavor** [6] Synonymous with VM instance type. Definable parameters include: Flavor ID, Name, VCPUs, RAM, Root Disk GB, Ephemeral Disk GB, and Swap. Simply put, it is the ‘size’ of the VM instance that may be launched. Default flavors are: m1.tiny, m1.small, m1.medium, m1.large, m1.xlarge.
+- **Flavor** [6] Synonymous with VM instance type. Definable parameters include: Flavor ID, Name, VCPUs, RAM, Root Disk GB, Ephemeral Disk GB, and Swap. Simply put, it is the 'size' of the VM instance that may be launched. Default flavors are: m1.tiny, m1.small, m1.medium, m1.large, m1.xlarge.
 - **Floating IP Address** [7] IP address that a project can associate with a VM instance so that it has the same public IP address each time it boots. Create a pool of floating IP addresses, then assign them to instances (usually when they are launched) to maintain a consistent IP address for maintaining DNS assignments.
 - **Front End** [1] The point where a user interacts with a service; can be an API endpoint, the horizon dashboard, or a command-line tool.
-- **FWaaS** [1] (Firewall as a Service) Offering customers perimeter firewall functionality via cloud infrastructure. Marketed by Managed Security Service Providers (MSSP) as Security-as-a-Service, and Network based firewalls. Advantages include offering predictable expense (subscription based), can grow or shrink firewall bandwidth capacity as needed, and no additional devices needed on customer’s site.
+- **FWaaS** [1] *Firewall as a Service* Offering customers perimeter firewall functionality via cloud infrastructure. Marketed by Managed Security Service Providers (MSSP) as Security-as-a-Service, and Network based firewalls. Advantages include offering predictable expense (subscription based), can grow or shrink firewall bandwidth capacity as needed, and no additional devices needed on customer's site.
 - **Gateway** [7] An IP addressed assigned to an interface, typically on a router, that can pass network traffic from one network to another.
 - **Git** [17] Free version control software created by Linus Torvalds in 2005 for Linux kernel development. Primarily used for software development, including OpenStack. Distributed model with complete history and version tracking without relying on client-server systems.
 - **Git Directory** [17] The .git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer. Typically exists on the central repository.
@@ -83,26 +83,26 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **High Availability** [19] A high availability system design approach and associated service implementation ensures that a prearranged level of operational performance will be met during a contractual measurement period. High availability systems seeks to minimize system downtime and data loss.
 - **Horizon** [2] One of the OpenStack Foundation core projects that provides a Dashboard via a web GUI interface.
 - **Host** [3] Synonymous with node. Refers to a physical computer, not a VM instance.
-- **HOT** [16] (Heat Orchestration Template) Heat input in the format native to OpenStack.
+- **HOT** [16] *Heat Orchestration Template* Heat input in the format native to OpenStack.
 - **HTTP** [3] Hypertext Transfer Protocol. HTTP is an application protocol for distributed, collaborative, hypermedia information systems. It is the foundation of data communication for the World Wide Web. Hypertext is structured text that uses logical links (hyperlinks) between nodes containing text. HTTP is the protocol to exchange or transfer hypertext.
 - **HTTPS** [3] Hypertext Transfer Protocol Secure is a communications protocol for secure communication over a computer network, with especially wide deployment on the Internet. Technically, it is not a protocol in and of itself; rather, it is the result of simply layering the Hypertext Transfer Protocol (HTTP) on top of the SSL/TLS protocol, thus adding the security capabilities of SSL/TLS to standard HTTP communications.
 - **Hyper V** [4] One of the hypervisors supported by OpenStack.
 - **Hypervisor** [4] Software that controls VM instance access to the underlying hardware.
-- **IaaS** [1] (Infastructure as a Service) is the outsourcing of physical components of a data center; storage, servers, hardware, and/or networking. Typically, a customer would pay to access these services.
+- **IaaS** [1] *Infastructure as a Service* is the outsourcing of physical components of a data center; storage, servers, hardware, and/or networking. Typically, a customer would pay to access these services.
 - **Identity** [5] Identity is provided by the Keystone project. Provides a centralized common authentication system that maps users to the OpenStack services they can access. Also registers endpoints for OpenStack services.
 - **Image** [10] Specifies the OS that you use to create or rebuild a server. OpenStack provides pre-built images. You can also create custom images, or snapshots, from servers that you have launched. Custom images can be used for data backups or as "gold" images for additional servers.
 - **Immutable Infrastructure** [1] Stability, efficiency, and fidelity to your applications through automation and the use of successful patterns from programming. No rigorous or standardized definition of immutable infrastructure exists yet, but the basic idea is that you create and operate your infrastructure using the programming concept of immutability: once you instantiate something, you never change it. Instead, you replace it with another instance to make changes or ensure proper behavior.
 - **Incubated Project** [1] The OpenStack Foundation may elevate a community project to this status before it is finally promoted to a core project.
-- **Infiniband** [13] (IB) A high bit rate communications link used in half of todays super computers. Can be much faster than 10Gbps Ethernet, with 2015 speeds expected to reach 300 Gps. Normally implemented with fiber, but copper links up to 30 meters are possible with IB.  
+- **Infiniband** [13] *IB* A high bit rate communications link used in half of todays super computers. Can be much faster than 10Gbps Ethernet, with 2015 speeds expected to reach 300 Gps. Normally implemented with fiber, but copper links up to 30 meters are possible with IB.  
 - **Infrastructure** [1] The basic physical and organizational structures and facilities used to house computer systems and associated components, such as telecommunications and storage systems.
 - **Injection** [3] Files may be put into a viritual machine image before the instance is started.
 - **Instance** [3] A running VM, or a VM in a known state such as suspended, that can be used like a hardware server. Instance, VM, VM instance are all interchangeable terms.
 - **Instance Tunnels Network** [7] A network used for instance traffic tunnels between compute nodes and the network node.
-- **Integrity Check** [11] A period comparison between the stored file’s computed MD5 value and its MD5 value stored in the metadata. When the two match, the file passes this integrity check.
+- **Integrity Check** [11] A period comparison between the stored file's computed MD5 value and its MD5 value stored in the metadata. When the two match, the file passes this integrity check.
 - **Interface** [3] Physical or virtualized devices that interconnect devices or medium.
 - **Ironic** [15] OpenStack project that provisions bare metal, as opposed to VM instances.
-- **JSON** [5] (JavaScript Object Notation) One of the supported response formats in OpenStack.
-- **Kernel Based VM** [4] (KVM) An OpenStack-supported hypervisor. KVM is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V), ARM, IBM Power, and IBM zSeries. It consists of a loadable kernel module, that provides the core virtualization infrastructure and a processor specific module.
+- **JSON** [5] *JavaScript Object Notation* One of the supported response formats in OpenStack.
+- **Kernel Based VM** [4] *KVM* An OpenStack-supported hypervisor. KVM is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V), ARM, IBM Power, and IBM zSeries. It consists of a loadable kernel module, that provides the core virtualization infrastructure and a processor specific module.
 - **Keystone** [5] One of the OpenStack Foundation core projects that provides the Identity Service.
 - **Large Object** [11] An object within Object Storage that is larger than 5 GB.
 - **Linux Bridge** [7] Software that allows multiple VM instances to share a single Physical NIC within Compute.
@@ -111,7 +111,7 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Live Migration** [3] Moving a VM instance from one host to another with a minimum service interruption.
 - **Management Network** [7] A network segment used for administration, not accessible to the public Internet.
 - **Memory Overcommit** [4] The ability to start new VM instances based on the actual memory usage of a host, as opposed to basing the decision on the amount of RAM each running instance thinks it has available. Also known as RAM overcommit.
-- **Monitor** [12] (Mon) A Ceph component that communicates with external clients, checks data state and consistency, and performs quorum functions.
+- **Monitor** [12] *Mon* A Ceph component that communicates with external clients, checks data state and consistency, and performs quorum functions.
 - **Multi-host** [7] High-availability mode for legacy (nova) networking. Each compute node handles NAT and DHCP and acts as a gateway for all of the VMs on it. A networking failure on one compute node doesn't affect VMs on other compute nodes.
 - **Nebula** [6] A NASA open source release that serves at the basis for Compute.
 - **Network Controller** [7] Compute daemon that orchestrates the network configuration of nodes, including IP addresses, VLANs, and bridging. Also manages routing for both public and private networks.
@@ -122,27 +122,27 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Node** [4] A VM instance that runs on a host.
 - **Non-bare** [17] A repository with a working directory. Cloned repositories for development work are non-bare. 
 - **Nova** [6] A core OpenStack project that provides compute services.
-- **NTP** [16] (Network Time Protocol) A method of keeping a clock for a host or node correct through communications with a trusted, accurate time source.
+- **NTP** [16] *Network Time Protocol* A method of keeping a clock for a host or node correct through communications with a trusted, accurate time source.
 - **Object** [11] A BLOB of data held by Object Storage; includes any format.
 - **Open vSwitch** [7] Open vSwitch is a production quality, multilayer virtual switch licensed under the open source Apache 2.0 license. It is designed to enable massive network automation through programmatic extension, while still supporting standard management interfaces and protocols (for example NetFlow, sFlow, SPAN, RSPAN, CLI, LACP, 802.1ag).
 - **OpenStack** [1] A cloud operating system that controls large pools of compute, storage, and networking resources throughout a data center, all managed through a dashboard that gives administrators control while empowering their users to provision resources through a web interface. OpenStack is an open source project licensed under the Apache License 2.0.
 - **Orchestration** [16] An integrated project that orchestrates multiple cloud applications for OpenStack. The project name of Orchestration is heat.
 - **OSD** [12] Object Storage Device Is a Ceph storage daemon.
-- **PaaS** [1] (Platform-as-a-Service) Provides to the consumer the ability to deploy applications through a programming language or tools supported by the cloud platform provider. Think an Eclipse/Java programming platform provided with no downloads required.
-- **Pause** [3] A state a VM instance may be placed in where no changes occur (no changes in memory, network communications stop, etc); the VM is frozen but not shut down. Also known as a ‘suspended’ mode.
+- **PaaS** [1] *Platform-as-a-Service* Provides to the consumer the ability to deploy applications through a programming language or tools supported by the cloud platform provider. Think an Eclipse/Java programming platform provided with no downloads required.
+- **Pause** [3] A state a VM instance may be placed in where no changes occur (no changes in memory, network communications stop, etc); the VM is frozen but not shut down. Also known as a suspended mode.
 - **Private Image** [10] An image that is only available to a particular tenant.
-- **Project** [5] Projects represent the base unit of “ownership” in OpenStack, in that all resources in OpenStack should be owned by a specific project. In OpenStack Identity, a project must be owned by a specific domain. A group of users is referred to as a project, or tenant. The terms are interchangeable.
+- **Project** [5] Projects represent the base unit of ownership in OpenStack, in that all resources in OpenStack should be owned by a specific project. In OpenStack Identity, a project must be owned by a specific domain. A group of users is referred to as a project, or tenant. The terms are interchangeable.
 - **Pull** [17] A locally issued request for a remote repository to return a commit on the remote repository. You pull in work from others to your own project.
 - **Puppet** [3] An OpenStack supported tool for configuration-management of operating systems.
 - **Push** [17] Local commit is pushed to a targeted library. This can be forceful, and disrupt a current working branch, therefore, a push should only ever target the central repository (which has no working directory).
-- **Python** [1] A popular programming language used in applications from Google’s credit card sized RaspberryPi project to OpenStack.
-- **QCOW2** [10] (QEMU Copy On Write 2) One of the VM image disk formats supported by Image service.
-- **Quick EMUlator** [4] (QEMU) is a generic and open source machine emulator and virtualizer. It is one of the hypervisors supported by OpenStack, generally used for development purposes.
-- **RADOS** [12] (Reliable, Autonomic Distributed Object Store) Collection of components that provides object storage within Ceph. Similar to OpenStack Object Storage.
+- **Python** [1] A popular programming language used in applications from Google's credit card sized RaspberryPi project to OpenStack.
+- **QCOW2** [10] *QEMU Copy On Write 2* One of the VM image disk formats supported by Image service.
+- **Quick EMUlator** [4] *QEMU* is a generic and open source machine emulator and virtualizer. It is one of the hypervisors supported by OpenStack, generally used for development purposes.
+- **RADOS** [12] *Reliable, Autonomic Distributed Object Store* Collection of components that provides object storage within Ceph. Similar to OpenStack Object Storage.
 - **RADOS Block Device (RBD)** [12] Ceph component that enables a Linux block device to be striped over multiple distributed data stores.
 - **RAM Overcommit** [3] The ability to start new VM instances based on the actual memory usage of a host, as opposed to basing the decision on the amount of RAM each running instance thinks it has available. Also known as memory overcommit.
 - **Raw** [4] One of the VM image disk formats supported by Image service; an unstructured disk image.
-- **Raw Device Mapping** [13] (RDM) An option in the VMware server virtualization environment that enables a storage logical unit number (LUN) to be directly connected to a virtual machine (VM) from the storage area network (SAN).
+- **Raw Device Mapping** [13] *RDM* An option in the VMware server virtualization environment that enables a storage logical unit number (LUN) to be directly connected to a virtual machine (VM) from the storage area network (SAN).
 - **Rebalance** [11] Distributing Object Storage partitions across all drives in the ring; used during initial ring creation and after ring reconfiguration.
 - **Reference Architecture** [1] Recommended architecture for an OpenStack cloud per the OpenStack Foundation.
 - **Replica** [11] Data redundancy and fault tolerance by creating copies of Object Storage objects, accounts, and containers so that they are not lost when the underlying storage fails.
@@ -154,11 +154,11 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Rotted** [11] Slang used by storage administrators to describe a file whose MD5 has no longer matches the MD5 hash in the metadata, indicating that file integrity was lost, most likely due to a disk error or failure.
 - **Scheduler Manager** [6] A Compute component that determines where VM instances should start. Uses modular design to support a variety of scheduler types.
 - **Server** [3] Two meanings might apply. The first, a computer that provides explicit services to the client software running on that system; LAMP, SIP, Minecraft, etc. The second is a VM instance (running within Compute).
-- **Service Catalog** [5] Also sometimes just referred to as the ‘catalog’, or the ‘endpoint registry’. Contains a list of API endpoints that are available to a user (i.e. such as Compute, Image Service, Identity, Object Storage, Block Storage, Networking, etc.) after authentication with the Identity service.
+- **Service Catalog** [5] Also sometimes just referred to as the 'catalog', or the 'endpoint registry'. Contains a list of API endpoints that are available to a user (i.e. such as Compute, Image Service, Identity, Object Storage, Block Storage, Networking, etc.) after authentication with the Identity service.
 - **Shared Storage** [11] Block storage that is simultaneously accessible by multiple clients, for example, NFS.
 - **Snapshot** [3] A point-in-time copy of an OpenStack storage volume or image. Use storage volume snapshots to back up volumes. Use image snapshots to back up data, or as "gold" images for additional servers.
 - **Source** [1] Just like . A bash shell built-in command that executes the content of the file passed as argument, in the current shell. It has a synonym in '.'
-- **Space** [11] A new word that makes you look cool by expressing any area with finite boundaries as a “space”.  Therefore, you would not say a dog’s lifespan is 12 years, you would say his lifespace is 12 twelve 365 day-spaces where you attempt to inject the word “space” when a far more efficient expression is available but due to low vocabulary-space, the wordspace will continue to be dominated excessive use of the word “space”.
+- **Space** [11] A new word that makes you look cool by expressing any area with finite boundaries as a 'space'.  Therefore, you would not say a dog's lifespan is 12 years, you would say his lifespace is 12 twelve 365 day-spaces where you attempt to inject the word 'space' when a far more efficient expression is available but due to low vocabulary-space, the wordspace will continue to be dominated excessive use of the word 'space'.
 - **Staging Area** [17] You modify files in your working directory, then stage the files. Staged files are snapshots, but not permanently committed. Staged files are permanently snapshotted when they are committed.
 - **Storage Node** [11] An Object Storage node that provides container services, account services, and object services; controls the account databases, container databases, and object storage.
 - **Swift** [11] An OpenStack core project that provides object storage services.
@@ -166,10 +166,10 @@ We hope that this glossary of definitions is helpful as you study OpenStack, as 
 - **Tenant** [5] It refers to a group of users; used to isolate access to Compute resources. Also known as a project, these terms are interchangeable. The initial implementation of OpenStack Compute had its own authentication system and used the term project. When authentication moved into the OpenStack Identity (keystone) project, it used the term tenant to refer to a group of users. Because of this legacy, some of the OpenStack tools refer to projects and some refer to tenants. 
 - **Token** [5] An alpha-numeric string of text used to access OpenStack APIs and resources.
 - **Trove** [16] OpenStack project that provides database services to applications.
-- **UML** [4] (User Mode Linux) An OpenStack-supported hypervisor.
+- **UML** [4] *User Mode Linux* An OpenStack-supported hypervisor.
 - **User** [5] In OpenStack Identity, entities represent individual API consumers and are owned by a specific domain. In OpenStack Compute, a user can be associated with roles, projects, or both.
-- **vCPU** [4] (Virtual Central Processing Unit) Subdivides physical CPUs. Instances can then use those divisions.
-- **Virtual Machine** [4] (VM) An operating system instance that runs on top of a hypervisor. Multiple VMs can run at the same time on the same physical host. Also called a ‘virtual server’, or ‘VM instance’.
+- **vCPU** [4] *Virtual Central Processing Unit* Subdivides physical CPUs. Instances can then use those divisions.
+- **Virtual Machine** [4] *VM* An operating system instance that runs on top of a hypervisor. Multiple VMs can run at the same time on the same physical host. Also called a 'virtual server', or 'VM instance'.
 - **Virtual Networking** [7] A generic term for virtualization of network functions such as switching, routing, load balancing, and security using a combination of VMs and overlays on physical network infrastructure.
 - **VirtualBox** [4] An OpenStack-supported hypervisor.
 - **VLAN Network** [7] The Network Controller provides virtual networks to enable compute servers to interact with each other and with the public network. All machines must have a public and private network interface. A VLAN network is a private network interface, which is controlled by the vlan_interface option with VLAN managers.
